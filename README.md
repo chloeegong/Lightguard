@@ -7,16 +7,16 @@ Lightguard is a mobile application that promotes well-being on college campuses 
 V1: 
 
 ### Prerequisite 
-Install the Expo Go app on your iOS or Android phone and connect to the same wireless network as your computer.
+## 1. Install the Expo Go app on your iOS or Android phone and connect to the same wireless network as your computer.
 
-#### Installation on MacOS
+## 2. Install NodeJS v16.17.1
+## Installation on MacOS
 Install NodeJS (via Homebrew on MacOS)
 ```
 $ brew install node
 ```
-#### Installation on Windows
-Install NodeJS v18.12.1 (via [NodeJS](https://nodejs.org/en/download/))
-
+## Installation on Windows
+Install NodeJS (via [NodeJS][https://nodejs.org/en/download/])
 
 ### Set up Development Environment 
 Clone repo and download dependencies
@@ -24,10 +24,26 @@ Clone repo and download dependencies
 $ git clone https://github.com/chloeegong/Lightguard.git
 ```
 
-Start development server
+Install packages for client
+```console
+$ npm install
+```
+
+Start client 
  ```console 
- $ cd LightguardApp
+ $ cd client
  $ npx expo start
+ ```
+
+Install packages for server
+```console
+$ npm install
+```
+
+ Start server 
+ ```
+ $ cd server 
+ $ npm run dev
  ```
 
 View project locally 
