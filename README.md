@@ -9,10 +9,14 @@ V1:
 ### Prerequisite 
 Install the Expo Go app on your iOS or Android phone and connect to the same wireless network as your computer.
 
-Install NodeJS (using Homebrew)
+## Installation on MacOS
+Install NodeJS (via Homebrew on MacOS)
 ```
 $ brew install node
 ```
+## Installation on Windows
+Install NodeJS v18.12.1 (via [NodeJS][https://nodejs.org/en/download/])
+
 
 ### Set up Development Environment 
 Clone repo and download dependencies
@@ -22,6 +26,7 @@ $ git clone https://github.com/chloeegong/Lightguard.git
 
 Start development server
  ```console 
+ $ cd LightguardApp
  $ npx expo start
  ```
 
