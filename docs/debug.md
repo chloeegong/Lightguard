@@ -1,4 +1,0 @@
-# Client debug tips 
-
-#### Links
--
