@@ -1,4 +1,4 @@
-# Lightguard Server
+# Lightguard Client
 
 ## About
 Lightguard is a mobile application that promotes well-being on college campuses through safety features such as route generation using well-lit paths, access to emergency resources, and contact notifications.
