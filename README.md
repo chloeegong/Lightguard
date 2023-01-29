@@ -36,7 +36,9 @@ In VS Code
  - In Command Palette go to MongoDB: Connect
  - Paste in your mongodb+srv://<user>:<password>@cluster0.lnycqwu.mongodb.net/test
  - Should now be connected
- (Server Repo .env file needs MONGO_SRV='mongodb+srv://user1:a2ShMBt8gpMTZzjL@cluster0.qsu9bgh.mongodb.net/test' (your part)
+ (Server Repo .env file needs MONGO_SRV='mongodb+srv://user1:a2ShMBt8gpMTZzjL@cluster0.qsu9bgh.mongodb.net/test' (your part))
+ (Server Repo .env file needs TWILIO_ACCOUNT_SID='<TWILIO SID>')
+ (Server Repo .env file needs TWILIO_AUTH_TOKEN='<TWILIO AUTH TOKEN>')
 
 ## Set up Development Environment 
 Clone repo and download dependencies
@@ -59,6 +61,7 @@ Install packages for server
 ```console
 $ npm install
 $ npm install twilio --save
+$ npm install dotenv --save
 ```
 
  Start server 
