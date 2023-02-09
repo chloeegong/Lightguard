@@ -1,9 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, wrap } from "react-native";
+import { StyleSheet, View, wrap, TouchableOpacity } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginPage from "./LoginPage";
+import SignUpPage from "./SignUpPage";
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,11 @@ function MyStack() {
       <Stack.Screen
         name="Login"
         component={LoginPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpPage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

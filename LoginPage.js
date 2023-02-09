@@ -1,9 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, wrap } from "react-native";
+import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
-export default function LoginPage() {
+export default function LoginPage({ navigation }) {
   return (
     <View style={styles.container}>
       <Text
@@ -99,9 +99,15 @@ export default function LoginPage() {
         }}
       >
         No account?{" "}
-        <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
-          Sign up
-        </Text>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("SignUp");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Sign up
+          </Text>
+        </TouchableOpacity>
       </Text>
     </View>
   );
