@@ -1,22 +1,28 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import LoginPage from "./LoginPage";
 
-//import { wrap } from "module";
+const Stack = createStackNavigator();
 
-// export default function App() {
-//   return (
-//   )
-// }
+function MyStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Login"
+        component={LoginPage}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+}
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     flexDirection: "column",
-//     alignItems: "flex-start",
-//     changeDirection: "inherit",
-//     backgroundColor: "#181818",
-//     alignItems: "center",
-//     justifyContent: "space-around",
-//   },
-// });
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
+  );
+}

@@ -1,7 +1,9 @@
 {
   "expoServerPort": null,
-  "packagerPort": 19001,
-  "expoServerNgrokUrl": "https://9gc66gy.anonymous.lightguard-client.exp.direct",
-  "packagerNgrokUrl": "https://9gc66gy.anonymous.lightguard-client.exp.direct",
-  "ngrokPid": 18184
+  "packagerPort": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "packagerPid": null,
+  "webpackServerPort": null
 }
