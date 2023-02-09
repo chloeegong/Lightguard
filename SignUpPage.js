@@ -1,9 +1,9 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, wrap } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
-export default function SignUpPage() {
+export default function SignUpPage({ navigation }) {
   return (
     <View style={styles.container}>
       <Text
@@ -98,6 +98,9 @@ export default function SignUpPage() {
           width: 200,
           marginHorizontal: 50,
           marginVertical: 10,
+        }}
+        onPress={() => {
+          navigation.navigate("Hazard");
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />

@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
+import HazardPage from "./HazardPage";
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,11 @@ function MyStack() {
       <Stack.Screen
         name="SignUp"
         component={SignUpPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Hazard"
+        component={HazardPage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
