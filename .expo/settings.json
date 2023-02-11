@@ -1,10 +1,9 @@
 {
-  "urlRandomness": "OIHcs-0",
+  "urlRandomness": "CouMFac",
   "dev": true,
   "minify": false,
   "https": false,
-  "hostType": "tunnel",
-  "lanType": "ip",
   "scheme": null,
+  "hostType": "tunnel",
   "devClient": false
 }
