@@ -109,6 +109,28 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+      {/* Enter Map */}
+      {/* Katrina */}
+      <Text
+        style={{
+          //position: "absolute",
+          bottom: "11%",
+          fontFamily: "Menlo",
+          fontSize: 13,
+          color: "#FFFFFF",
+        }}
+      >
+        Test Map:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Map");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
     </View>
   );
 }
