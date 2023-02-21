@@ -131,6 +131,28 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+      {/* Test call emerg services */}
+      {/* Jocelyn */}
+      <Text
+        style={{
+          //position: "absolute",
+          bottom: "5%",
+          fontFamily: "Menlo",
+          fontSize: 13,
+          color: "#FFFFFF",
+        }}
+      >
+        Test Calling:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("CallEmergServices");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
     </View>
   );
 }
