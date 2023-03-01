@@ -94,12 +94,9 @@ export default function Map() {
                     onDragEnd = {e => setDestination(e.nativeEvent.coordinate)}
                 />
 
-                {/* Map markers */}
-                <Marker
-                    title = "University Student Union"
-                    coordinate = {{latitude: 33.781394139038255, longitude: -118.11363452819558}}
-                    pinColor = "grey"
-                />
+                {/* Beginning of Map markers */}
+
+                {/*Stores*/}
                 <Marker
                     title = "CSULB Bookstore"
                     coordinate = {{latitude: 33.78008155620075, longitude: -118.11433773815789,}}
@@ -112,6 +109,19 @@ export default function Map() {
                     pinColor = "blue"
                     description="Open 8am-5pm"
                 />
+                <Marker 
+                    title = "Beach Print Shop"
+                    coordinate = {{latitude: 33.78437261706521, longitude: -118.10844770761423}}
+                    pinColor = "blue"
+                />
+                {/*Stores*/}
+
+                {/* Student Institutions */}
+                <Marker
+                    title = "University Student Union"
+                    coordinate = {{latitude: 33.781394139038255, longitude: -118.11363452819558}}
+                    pinColor = "grey"
+                />
                 <Marker
                     title = "CSULB University Library"
                     coordinate = {{latitude: 33.77715748396334, longitude: -118.11440225169851}}
@@ -122,35 +132,124 @@ export default function Map() {
                     coordinate = {{latitude: 33.783095366206354, longitude: -118.11550847702843}}
                     pinColor = "grey"
                 />
-                <Marker
-                    title = "Collge of Bussiness Administration"
-                    coordinate = {{latitude: 33.784203603931346, longitude: -118.11597388561465}}
-                    pinColor = "grey"
-                />  
                 <Marker 
-                    title = "College of Engineering"
-                    coordinate = {{latitude: 33.78345456078655, longitude: -118.11035197562316}}
+                    title = "Student Health Services"
+                    coordinate = {{latitude: 33.78254101100577, longitude: -118.11787996775904}}
+                    pinColor = "grey"
+                />
+                {/* Institutions */}
+
+                {/*Dorm area */}
+                <Marker 
+                    title = "International House"
+                    coordinate = {{latitude: 33.781813932732575, longitude: -118.12100002756084}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Visitor Center"
+                    coordinate={{latitude: 33.78206452019229, longitude: -118.11929157681293}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Los Cerritos Hall"
+                    coordinate = {{latitude: 33.7824320471612, longitude: -118.11907048320572}}
                     pinColor = "grey"
                 />
                 <Marker
-                    title = "College of Health and Human Services"
-                    coordinate = {{latitude: 33.78363290498197, longitude: -118.10941856697004}}
+                    title = "Hillside Dining Hall"
+                    coordinate = {{latitude: 33.78318751385211, longitude:-118.11954830170669}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Los Alimitos Hall"
+                    coordinate = {{latitude: 33.783401527510534, longitude: -118.11870072370508}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Hillside College"
+                    coordinate = {{latitude: 33.783158318914275, longitude: -118.11946041543574}}
                     pinColor = "grey"
                 />
                 <Marker
-                    title = "College of Professional and International Education - Headquarters "
-                    coordinate = {{latitude: 33.7812564712598, longitude: -118.11004972035246 }}
+                    title = "Parkside College"
+                    coordinate = {{latitiude: 33.78696478554438, longitude: -118.12008537012139}}
                     pinColor = "grey"
                 />
                 <Marker
-                    title = "College of Natural Sciences and Mathematics"
-                    coordinate = {{latitude: 33.780027654995564, longitude: -118.11231386367068}}
+                    title = "Parkside Dining Hall"
+                    coordinate = {{latitude: 33.78697128043133, longitude: -118.12027654070549}}
                     pinColor = "grey"
                 />
+                <Marker 
+                    title = "Parkside North"
+                    coordinate = {{latitdue: 33.78824974154099, longitude: -118.11951647148983}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Housing and Residental Life Office"
+                    coordinate = {{latitude: 33.783419486826354, longitude: -118.11991579897325}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Isabel Patterson Child Development Center"
+                    coordinate={{latitude: 33.78830669627805, longitude: -118.12049046791749}}
+                    pinColor = "grey"
+                />
+                {/*Dorm Area */}
+
+                {/*The Arts*/}
                 <Marker
                     title = "University Theatre"
                     coordinate = {{latitude: 33.77679903325372, longitude: -118.11153607049577}}
                     pinColor = "cyan"
+                />
+                <Marker
+                    title = "Gatov Gallery"
+                    coordinate = {{latitude: 33.77765760271764, longitude: -118.1123342336445}}
+                    pinColor = "cyan"
+                />
+                <Marker 
+                    title = "California Repertory Company"
+                    coordinate = {{latitude: 33.776507195852545, longitude: -118.11260245449769}}
+                    pinColor = "cyan"
+                />
+                <Marker 
+                    title = "Martha B. Knoebel Dance Theatre"
+                    coordinate = {{latitude: 33.788527642618874, longitude: -118.11331865481107}}
+                    pinColor = "cyan"
+                />
+                <Marker 
+                    title = "Gerald R. Daniel Recital Hall"
+                    coordinate = {{latitude: 33.78770730313167, longitude: -118.11302361183581}}
+                    pinColor = "cyan"
+                />
+                <Marker 
+                    title = "Musical Theatre West"
+                    coordinate = {{latitude: 33.788344850261474, longitude: -118.11233696636619}}
+                    pinColor = "cyan"
+                />
+                <Marker 
+                    title = "Carpenter Performing Arts Center"
+                    coordinate = {{latitude: 33.78827351654503, longitude: -118.11168787184089}}
+                    pinColor = "cyan"
+                />
+                <Marker
+                    title = "Bob Cole Conservatory of Music"
+                    coordinate = {{latitude: 33.7872614631498, longitude: -118.11256763634887}}
+                    pinColor = "cyan"
+                />
+                <Marker 
+                    title = "Carolyn Campagna Kleefeld Contemporary Art Museum"
+                    coordinate = {{latitude: 33.78348405592135, longitude: -118.11471822142283}}
+                    pinColor = "cyan"
+                />
+                {/*The Arts*/}
+
+                {/*Atheltics*/}
+                <Marker 
+                    title = "Barrett Athletic Administration Building"
+                    coordinate = {{latitude: 33.78647173074106, longitude: -118.11490130697034}}
+                    pinColor = "green"
                 />
                 <Marker 
                     title = "Walter Pyramid"
@@ -203,6 +302,19 @@ export default function Map() {
                     pinColor = "green"
                 />
                 <Marker 
+                    title = "George Allen Field"
+                    coordinate = {{latitude: 33.785996861998946, longitude: -118.110697264747}}
+                    pinColor = "green"
+                />
+                <Marker 
+                    title = "Soccer and Softball Club House"
+                    coordinate = {{latitude: 33.78677700599612, longitude: -118.11206775074483}}
+                    pinColor = "green"
+                />
+                {/*Atheltics*/}
+
+                {/*Dining*/}
+                <Marker 
                     title = "The Outpost Grill"
                     coordinate = {{latitude: 33.78262839754427, longitude: -118.11017035252026}}
                     pinColor = "orange"
@@ -212,6 +324,195 @@ export default function Map() {
                     coordinate = {{latitude: 33.780406214630815, longitude: -118.11451005576808}}
                     pinColor = "orange"
                 />
+                <Marker 
+                    title = "The Chartroom"
+                    coordinate = {{latitude: 33.78072824900645, longitude: -118.11439221725203}}
+                    pinColor = "orange"
+                />
+                <Marker 
+                    title = "Pollo Loco"
+                    coordinate = {{latitude: 33.781288656517646, longitude: -118.11359157786976}}
+                    pinColor = "orange"
+                />
+                <Marker 
+                    title = "The Coffee Bean & Tea Leaf"
+                    coordinate = {{latitude: 33.78115043601451, longitude: -118.11315974224236}}
+                    pinColor = "orange"
+                />
+                {/*Dining*/}
+
+                {/*General Parking Lots*/}
+                <Marker
+                    title = "Parking, Transportation, and Events Services"
+                    coordinate = {{latitude: 33.7853063340804, longitude: -118.11622314122997}}
+                    pinColor = "purple"
+                />
+                <Marker
+                    title = "General 1"
+                    coordinate = {{latitude: 33.7817022693597, longitude: -118.11934491506094}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 2"
+                    coordinate = {{latitude: 33.78393159077944, longitude: -118.12078257904273 }}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 3"
+                    coordinate = {{latitude: 33.78305770372613, longitude: -118.11716696128155}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 4"
+                    coordinate = {{latitude: 33.784448785083455, longitude: -118.11836859087828}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 5"
+                    coordinate = {{latitude: 33.78488572264806, longitude: -118.11643740039116}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 6"
+                    coordinate = {{latitude: 33.78547424728388, longitude: -118.11753174162924}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 7"
+                    coordinate = {{latitude: 33.78682962192349, longitude: -118.11754247046493}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 8"
+                    coordinate = {{latitude: 33.78738692438853, longitude: -118.11756392813689}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 9"
+                    coordinate = {{latitude: 33.788100266202505, longitude: -118.11721524097713}}
+                    pinColor = "purple"
+                />
+                <Marker
+                    title = "General 10"
+                    coordinate = {{latitude: 33.78799772369316, longitude: -118.12007984016344}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 11"
+                    coordinate = {{latitude: 33.78771238733553, longitude: -118.1156863818726}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 12"
+                    coordinate = {{latitude: 33.78790186861178, longitude: -118.1106384644855}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 13"
+                    coordinate = {{latitude: 33.78736620932004, longitude: -118.10846725770554}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "General 14"
+                    coordinate = {{latitude: 33.78606371209624, longitude: -118.10850946078669}}
+                    pinColor = "purple"
+                />
+                <Marker
+                    title = "Palo Verde North Parking Structure"
+                    coordinate = {{latitude: 33.78761358354249, longitude: -118.109528347719}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Palo Verde South Parking Structure"
+                    coordinate = {{latitude: 33.786169052021435, longitude: -118.10907773662954}}
+                    pinColor = "purple"
+                />
+                {/*General Parking Lots*/}
+
+                {/*Residence Parking Lots*/}
+                <Marker 
+                    title = "Residence 1 Parking Lot"
+                    coordinate = {{latitude: 33.78292624383255, longitude: -118.11878154878552}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Residence 2 Parking Lot"
+                    coordinate = {{latitude: 33.785922395582524, longitude: -118.11927507528542}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Residence 3 Parking Lot"
+                    coordinate = {{latitude: 33.7855567993545, longitude: -118.1183094800937}}
+                    pinColor = "purple"
+                />
+                {/*Residence Parking Lots*/}
+
+                {/*Employee Parking Lots*/}
+                <Marker 
+                    title = "Employee Parking Lot 1"
+                    coordinate = {{latitdue: 33.78356699695567, longitude: -118.11665162650583}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 2"
+                    coordinate = {{latitude: 33.78249915466813, longitude: -118.11400160399504}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 3"
+                    coordinate = {{latitude: 33.78364475023127, longitude: -118.11259456290709}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 4"
+                    coordinate = {{latitude: 33.78434474753005, longitude: -118.11178990023072}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 6"
+                    coordinate = {{latitude: 33.782578469419775, longitude: -118.1084282221336}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 7"
+                    coordinate = {{latitude: 33.7786458452091, longitude: -118.1117863477463}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 8"
+                    coordinate = {{latitude: 33.77588130744563, longitude: -118.11200092450086}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 9"
+                    coordinate = {{latitude: 33.77659474508107, longitude: -118.1149835407597}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Employee Parking Lot 10"
+                    coordinate = {{latitude: 33.77967137687648, longitude: -118.11484406595054}}
+                    pinColor = "purple"
+                />
+                {/*Employee Parking Lots*/}
+
+                {/*Landmarks*/}
+                <Marker
+                    title = "Lyman Lough Fountain"
+                    coordinate = {{latitude: 33.78239537942915, longitude: -118.11475672687686}}
+                    pinColor = "yellow"
+                />
+                <Marker 
+                    title = "Go Beach Sign"
+                    coordinate = {{latitude: 33.78195842917447, longitude: -118.1144241329775}}
+                    pinColor = "yellow"
+                />
+                <Marker
+                    title = "Earl Burns Miller Japanese Garden"
+                    coordinate = {{latitude: 33.7852887152407, longitude: -118.11983588680643}}
+                    pinColor = "yellow"
+                />
+                {/*Landmarks*/}
+
                 {/* End of map markers */}
 
                 {/* Draw WALKING path between the origin and destination. */}
