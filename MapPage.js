@@ -1,5 +1,5 @@
 // Setting up our homepage using React Native Maps.
-// Chloee Gong + Katrina Orevillo + Miguel Echeverria
+// Chloee Gong + Katrina Orevillo + Miguel Echeverria + Jocelyn Gonzalez
 // Setting up map + initial routing: https://www.youtube.com/watch?v=i8bni7mUqXE
 // Search bar: https://www.youtube.com/watch?v=bvn_HYpix6s&t=1s, https://www.youtube.com/watch?v=Wq3dO05jv6o
 
@@ -29,6 +29,10 @@ export default function Map() {
         latitude:33.78286056260645, 
         longitude:-118.11030815967545,
     });
+
+    {/* Set light destinations */}
+    {/* Jocelyn */}
+
 
     {/* Ask permission from user to use their location. */}
     {/* Katrina */}
