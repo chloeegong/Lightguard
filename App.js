@@ -7,6 +7,7 @@ import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import HazardPage from "./HazardPage";
 import MapPage from "./MapPage";
+import CallEmergServicesPage from "./CallEmergServicesPage";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,11 @@ function MyStack() {
       <Stack.Screen
         name="Hazard"
         component={HazardPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CallEmergServices"
+        component={CallEmergServicesPage}
         options={{ headerShown: false }}
       />
       <Stack.Screen
