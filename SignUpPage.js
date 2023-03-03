@@ -1,9 +1,40 @@
+import axios from "axios"; 
+import React, { useState } from 'react';
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
 export default function SignUpPage({ navigation }) {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const handleSignUp = async () => {
+    // console.log(setFirstName); 
+    // if (setPassword != setConfirmPassword) {
+    //   console.log("Passwords do not match"); 
+    //   return; 
+    // } 
+    try {
+      const response = await axios.post('http://localhost:3001/auth/users/student-register', {
+        firstName,
+        lastName,
+        email,
+        password,
+        phoneNumber
+      });
+
+      console.log(response.data); 
+      navigation.navigate("Hazard");
+    } catch (error) {
+      console.error(error.response);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text
@@ -29,6 +60,7 @@ export default function SignUpPage({ navigation }) {
           type: "font-awesome",
           name: "user",
         }}
+        onChangeText={setFirstName}
       />
       <Input
         {...inputStyles}
@@ -40,6 +72,7 @@ export default function SignUpPage({ navigation }) {
           type: "font-awesome",
           name: "user",
         }}
+        onChangeText={setLastName}
       />
       <Input
         {...inputStyles}
@@ -51,9 +84,11 @@ export default function SignUpPage({ navigation }) {
           type: "font-awesome",
           name: "envelope",
         }}
+        onChangeText={setEmail}
       />
       <Input
         {...inputStyles}
+        {...secureStyles}
         containerStyle={{ width: "80%", bottom: "6%" }}
         placeholder="Password"
         leftIcon={{
@@ -62,9 +97,11 @@ export default function SignUpPage({ navigation }) {
           type: "font-awesome",
           name: "lock",
         }}
+        onChangeText={setPassword}
       />
       <Input
         {...inputStyles}
+        {...secureStyles}
         containerStyle={{ width: "80%", bottom: "13%" }}
         placeholder="Confirm Password"
         leftIcon={{
@@ -73,6 +110,7 @@ export default function SignUpPage({ navigation }) {
           type: "font-awesome",
           name: "lock",
         }}
+        onChangeText={setConfirmPassword}
       />
       <Input
         {...inputStyles}
@@ -84,6 +122,7 @@ export default function SignUpPage({ navigation }) {
           type: "font-awesome",
           name: "phone",
         }}
+        onChangeText={setPhoneNumber}
       />
       <Button
         title="Next step"
@@ -100,7 +139,7 @@ export default function SignUpPage({ navigation }) {
           marginVertical: 10,
         }}
         onPress={() => {
-          navigation.navigate("Hazard");
+          handleSignUp(); 
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
@@ -120,7 +159,7 @@ const styles = StyleSheet.create({
   },
 });
 const inputStyles = {
-  secureTextEntry: true,
+  // secureTextEntry: true,
   inputStyle: {
     color: "white",
     paddingLeft: "3%",
@@ -133,3 +172,6 @@ const inputStyles = {
     paddingLeft: "5%",
   },
 };
+const secureStyles = {
+  secureTextEntry: true,
+}; 
