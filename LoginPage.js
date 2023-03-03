@@ -1,9 +1,27 @@
+import axios from "axios"; 
+import React, { useState } from 'react'; 
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
-//import { wrap } from "module";
 
 export default function LoginPage({ navigation }) {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/api/auth/login', {
+        email, 
+        password
+      }); 
+
+      console.log(response.data); 
+      navigation.navigate("Map"); 
+    } catch (error) {
+      console.error(error.response); 
+    }
+  }; 
+
   return (
     <View style={styles.container}>
       <Text
@@ -11,7 +29,7 @@ export default function LoginPage({ navigation }) {
           top: "13%",
           fontFamily: "Menlo-Bold",
           fontSize: 30,
-          color: "#F9CB40",
+          color: "#F9CB40"
         }}
       >
         Lightguard
@@ -41,7 +59,7 @@ export default function LoginPage({ navigation }) {
         containerStyle={{ width: "80%", top: "7%" }}
         placeholder="Email"
         leftIconContainerStyle={{
-          paddingTop: "7%",
+          paddingTop: "70%",
           paddingLeft: "5%",
         }}
         leftIcon={{
@@ -50,6 +68,7 @@ export default function LoginPage({ navigation }) {
           type: "font-awesome",
           name: "envelope",
         }}
+        onChangeText={setEmail}
       />
       <Input
         secureTextEntry={true}
@@ -72,6 +91,7 @@ export default function LoginPage({ navigation }) {
           type: "font-awesome",
           name: "lock",
         }}
+        onChangeText={setPassword}
       />
       <Button
         title="Let's go!"
@@ -86,6 +106,9 @@ export default function LoginPage({ navigation }) {
           width: 200,
           marginHorizontal: 50,
           marginVertical: 10,
+        }}
+        onPress={() => {
+          handleLogin(); 
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
