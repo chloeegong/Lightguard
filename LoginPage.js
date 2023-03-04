@@ -96,7 +96,7 @@ export default function LoginPage({ navigation }) {
         Test Map:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("MapPage");
+            navigation.navigate("Map");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
@@ -111,7 +111,7 @@ export default function LoginPage({ navigation }) {
         Test Call:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("CallEmergServicesPage");
+            navigation.navigate("CallEmergServices");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
