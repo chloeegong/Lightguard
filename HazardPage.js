@@ -4,13 +4,18 @@ import { Text, Button, Input, CheckBox, Icon } from "@rneui/themed";
 import React, { useState } from "react";
 //import { wrap } from "module";
 
+//This is our HazardPage
 export default function HazardPage({ navigation }) {
+  //Creating state variables to show whether users checked the checkbox
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
   const [check3, setCheck3] = useState(false);
   const [check4, setCheck4] = useState(false);
+  //What we're returning
   return (
+    //This view encapsulates all of our elements
     <View style={styles.container}>
+      {/** Text Element for our Title*/}
       <Text
         style={{
           top: "20%",
@@ -21,6 +26,7 @@ export default function HazardPage({ navigation }) {
       >
         Hazard Reporting
       </Text>
+      {/** CheckBox Element for our users to select what hazard they are reporting*/}
       <CheckBox
         {...boxStyle}
         center
@@ -49,6 +55,7 @@ export default function HazardPage({ navigation }) {
         checked={check4}
         onPress={() => setCheck4(!check4)}
       />
+      {/** Button element to submit the report, temporarily leads to the login page again*/}
       <Button
         title="Report"
         buttonStyle={{
@@ -71,10 +78,12 @@ export default function HazardPage({ navigation }) {
     </View>
   );
 }
+//Styling used for all of the textboxes
 const boxStyle = {
   textStyle: { fontSize: "15px", color: "white" },
   containerStyle: { top: "28%", backgroundColor: "#181818" },
 };
+//Styling used for the view everything is incapsulated in
 const styles = StyleSheet.create({
   container: {
     flex: 1,

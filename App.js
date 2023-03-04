@@ -6,12 +6,21 @@ import { NavigationContainer } from "@react-navigation/native";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import HazardPage from "./HazardPage";
+import SchedulePath from "./SchedulePath";
 
+//Creates the StackNavigator, which allows us to add screens in the stack and navigate to other screens
 const Stack = createStackNavigator();
 
+//This function adds all the screens in our app to our stack navigator
 function MyStack() {
   return (
+    //This is a function for our Stack we made earlier, we are adding screens such as LoginPage, SignUpPage, and HazardPage
     <Stack.Navigator>
+      <Stack.Screen
+        name="SchedulePath"
+        component={SchedulePath}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Login"
         component={LoginPage}
@@ -31,8 +40,10 @@ function MyStack() {
   );
 }
 
+//This is what our app returns when it runs
 export default function App() {
   return (
+    //NavigationContainer, is a container with our Stack of pages inside of it
     <NavigationContainer>
       <MyStack />
     </NavigationContainer>

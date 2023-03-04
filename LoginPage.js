@@ -3,9 +3,12 @@ import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
+//This is our LoginPage
 export default function LoginPage({ navigation }) {
   return (
+    //This view encapsulates all of our elements
     <View style={styles.container}>
+      {/** Text Element for our Title*/}
       <Text
         style={{
           top: "13%",
@@ -16,7 +19,6 @@ export default function LoginPage({ navigation }) {
       >
         Lightguard
       </Text>
-
       <Text
         style={{
           top: "17.5%",
@@ -28,8 +30,10 @@ export default function LoginPage({ navigation }) {
         Log in to get started!
       </Text>
 
+      {/** This is the status bar, the bar on top of the phone that shows battery life and time*/}
       <StatusBar style="auto" />
 
+      {/** Input element for Login Email*/}
       <Input
         inputStyle={{
           color: "white",
@@ -51,6 +55,7 @@ export default function LoginPage({ navigation }) {
           name: "envelope",
         }}
       />
+      {/** Input element for Login password*/}
       <Input
         secureTextEntry={true}
         inputStyle={{
@@ -73,6 +78,7 @@ export default function LoginPage({ navigation }) {
           name: "lock",
         }}
       />
+      {/** Button element to move to next page when email and password and entered*/}
       <Button
         title="Let's go!"
         buttonStyle={{
@@ -89,6 +95,7 @@ export default function LoginPage({ navigation }) {
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+      {/** Text element for no account, and used touchable opacity (button) to lead users to signup page*/}
       <Text
         style={{
           //position: "absolute",
@@ -113,6 +120,7 @@ export default function LoginPage({ navigation }) {
   );
 }
 
+//Stylesheet that we are using for our view, using flexbox to align our items
 const styles = StyleSheet.create({
   container: {
     flex: 1,
