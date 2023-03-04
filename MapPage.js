@@ -99,24 +99,28 @@ export default function Map() {
                 />
 
                 {/* Beginning of Map markers */}
+                {/* Miguel (Coordinates) */}
+                {/* Katrina (Near-To Index) */}
+                
 
                 {/*Stores*/}
                 <Marker
                     title = "CSULB Bookstore"
                     coordinate = {{latitude: 33.78008155620075, longitude: -118.11433773815789,}}
                     pinColor = "blue"
-                    description="Open 8am-5pm"
+                    description="Near to: Amazon Hub, The Nugget Pub & Grill"
                 />
                 <Marker
                     title = "CSULB Art Store"
                     coordinate = {{latitude: 33.77795055536601, longitude: -118.11197028975022}}
                     pinColor = "blue"
-                    description="Open 8am-5pm"
+                    description="Near to: Gatov Gallery, Central Quad"
                 />
                 <Marker 
                     title = "Beach Print Shop"
                     coordinate = {{latitude: 33.78437261706521, longitude: -118.10844770761423}}
                     pinColor = "blue"
+                    description="Near to: Student Recreation and Wellness Center"
                 />
                 {/*Stores*/}
 
@@ -125,21 +129,25 @@ export default function Map() {
                     title = "University Student Union"
                     coordinate = {{latitude: 33.781394139038255, longitude: -118.11363452819558}}
                     pinColor = "grey"
+                    description="Near to: El Pollo Loco"
                 />
                 <Marker
                     title = "CSULB University Library"
                     coordinate = {{latitude: 33.77715748396334, longitude: -118.11440225169851}}
                     pinColor = "grey"
+                    description="Near to: Central Quad, California Repertory Company"
                 />
                 <Marker
                     title = "Brotman Hall"
                     coordinate = {{latitude: 33.783095366206354, longitude: -118.11550847702843}}
                     pinColor = "grey"
+                    description="Near to: Lyman Lough Fountain, Go Beach Sign"
                 />
                 <Marker 
                     title = "Student Health Services"
                     coordinate = {{latitude: 33.78254101100577, longitude: -118.11787996775904}}
                     pinColor = "grey"
+                    description="Near to: Los Cerritos Hall, Visitor Center"
                 />
                 {/* Institutions */}
 
@@ -148,56 +156,67 @@ export default function Map() {
                     title = "International House"
                     coordinate = {{latitude: 33.781813932732575, longitude: -118.12100002756084}}
                     pinColor = "grey"
+                    description="Near to: Visitor Center"
                 />
                 <Marker 
                     title = "Visitor Center"
                     coordinate={{latitude: 33.78206452019229, longitude: -118.11929157681293}}
                     pinColor = "grey"
+                    description="Near to: International House, Student Health Services"
                 />
                 <Marker 
                     title = "Los Cerritos Hall"
                     coordinate = {{latitude: 33.7824320471612, longitude: -118.11907048320572}}
                     pinColor = "grey"
+                    description="Near to: Los Alamitos Hall, Hillside College"
                 />
                 <Marker
                     title = "Hillside Dining Hall"
                     coordinate = {{latitude: 33.78318751385211, longitude:-118.11954830170669}}
                     pinColor = "grey"
+                    description="Near to: Hillside College, Housing and Residential Life Office"
                 />
                 <Marker 
-                    title = "Los Alimitos Hall"
+                    title = "Los Alamitos Hall"
                     coordinate = {{latitude: 33.783401527510534, longitude: -118.11870072370508}}
                     pinColor = "grey"
+                    description="Near to: Los Cerritos Hall, Hillside College"
                 />
                 <Marker 
                     title = "Hillside College"
                     coordinate = {{latitude: 33.783158318914275, longitude: -118.11946041543574}}
                     pinColor = "grey"
+                    description="Near to: Hillside Dining Hall, Housing and Residential Life Office"
                 />
                 <Marker
                     title = "Parkside College"
                     coordinate = {{latitiude: 33.78696478554438, longitude: -118.12008537012139}}
                     pinColor = "grey"
+                    description="Near to: Parkside Dining Hall, Isabel Patterson Child Development Center"
                 />
                 <Marker
                     title = "Parkside Dining Hall"
                     coordinate = {{latitude: 33.78697128043133, longitude: -118.12027654070549}}
                     pinColor = "grey"
+                    description="Near to: Parkside College, Isabel Patterson Child Development Center"
                 />
                 <Marker 
                     title = "Parkside North"
                     coordinate = {{latitdue: 33.78824974154099, longitude: -118.11951647148983}}
                     pinColor = "grey"
+                    description="Near to: Parkside Dining Hall, Isabel Patterson Child Development Center"
                 />
                 <Marker
                     title = "Housing and Residental Life Office"
                     coordinate = {{latitude: 33.783419486826354, longitude: -118.11991579897325}}
                     pinColor = "grey"
+                    description="Near to: Hillside College, Hillside Dining Hall"
                 />
                 <Marker 
                     title = "Isabel Patterson Child Development Center"
                     coordinate={{latitude: 33.78830669627805, longitude: -118.12049046791749}}
                     pinColor = "grey"
+                    description="Near to: Parkside North, Parkside Dining Hall"
                 />
                 {/*Dorm Area */}
 
@@ -206,114 +225,136 @@ export default function Map() {
                     title = "University Theatre"
                     coordinate = {{latitude: 33.77679903325372, longitude: -118.11153607049577}}
                     pinColor = "cyan"
+                    description="Near to: Gatov Gallery"
                 />
                 <Marker
                     title = "Gatov Gallery"
                     coordinate = {{latitude: 33.77765760271764, longitude: -118.1123342336445}}
                     pinColor = "cyan"
+                    description="Near to: University Theater"
                 />
                 <Marker 
                     title = "California Repertory Company"
                     coordinate = {{latitude: 33.776507195852545, longitude: -118.11260245449769}}
                     pinColor = "cyan"
+                    description="Near to: University Library"
                 />
                 <Marker 
                     title = "Martha B. Knoebel Dance Theatre"
                     coordinate = {{latitude: 33.788527642618874, longitude: -118.11331865481107}}
                     pinColor = "cyan"
+                    description="Near to: Gerald R. Daniel Recital Hall"
                 />
                 <Marker 
                     title = "Gerald R. Daniel Recital Hall"
                     coordinate = {{latitude: 33.78770730313167, longitude: -118.11302361183581}}
                     pinColor = "cyan"
+                    description="Near to: Bob Cole Conservatory of Music"
                 />
                 <Marker 
                     title = "Musical Theatre West"
                     coordinate = {{latitude: 33.788344850261474, longitude: -118.11233696636619}}
                     pinColor = "cyan"
+                    description="Near to: Carpenter Performing Arts Center"
                 />
                 <Marker 
                     title = "Carpenter Performing Arts Center"
                     coordinate = {{latitude: 33.78827351654503, longitude: -118.11168787184089}}
                     pinColor = "cyan"
+                    description="Near to: Musical Theatre West"
                 />
                 <Marker
                     title = "Bob Cole Conservatory of Music"
                     coordinate = {{latitude: 33.7872614631498, longitude: -118.11256763634887}}
                     pinColor = "cyan"
+                    description="Near to: Gerald R. Daniel Recital Hall"
                 />
                 <Marker 
                     title = "Carolyn Campagna Kleefeld Contemporary Art Museum"
                     coordinate = {{latitude: 33.78348405592135, longitude: -118.11471822142283}}
                     pinColor = "cyan"
+                    description="Near to: Horn Center, Brotman Hall"
                 />
                 {/*The Arts*/}
 
                 {/*Atheltics*/}
                 <Marker 
-                    title = "Barrett Athletic Administration Building"
+                    title = "Barett Athletic Administration Building"
                     coordinate = {{latitude: 33.78647173074106, longitude: -118.11490130697034}}
                     pinColor = "green"
+                    description="Near to: Walter Pyramid, Baseball Field"
                 />
                 <Marker 
                     title = "Walter Pyramid"
                     coordinate = {{latitude: 33.78710202775871, longitude: -118.11456526691019}}
                     pinColor = "green"
+                    description="Near to: Baseball Field, Barett Athletic Administration Building"
                 />
                 <Marker
                     title = "Baseball Field"
                     coordinate = {{latitude: 33.786414627192, longitude: -118.11337633312556}}
                     pinColor = "green"
+                    description="Near to: Walter Pyramid, Softball Field"
                 />
                 <Marker 
                     title = "Softball Field"
                     coordinate = {{latitude: 33.78631151663152, longitude: -118.11200130544826}}
                     pinColor = "green"
+                    description="Near to: George Allen Field, Soccer and Softball Club House"
                 />
                 <Marker
                     title = "Track and Field"
                     coordinate = {{latitude: 33.78474765787074, longitude: -118.11461695958864}}
                     pinColor = "green"
+                    description="Near to: Carolyn Campagna Kleefeld Contemporary Art Museum"
                 />
                 <Marker
                     title = "Ken Lindgren Aquatics Center"
                     coordinate={{latitude: 33.78384541869399, longitude: -118.11254924879574}}
                     pinColor = "green"
+                    description="Near to: Rhodes Tennis Courts"
                 /> 
                 <Marker 
-                    title = "Tennis Courts"
+                    title = "Rhodes Tennis Courts"
                     coordinate = {{latitude: 33.784687508885945, longitude: -118.11058492349595}}
                     pinColor = "green"
+                    description="Near to: Ken Lindgren Aquatics Center"
                 />
                 <Marker
                     title = "Life Fit Center @ The Beach"
                     coordinate = {{latitiude: 33.78328688488456, longitude: -118.1119289354493}}
                     pinColor = "green"
+                    description="Near to: Ken Lindgren Aquatics Center"
                 />
                 <Marker 
                     title = "Student Recreation and Wellness Center"
                     coordinate = {{latitude: 33.78504840216096, longitude: -118.10920989569456}}
                     pinColor = "green"
+                    description="Near to: Beach Print Shop"
                 />
                 <Marker 
                     title = "Hardfact Hill"
                     coordinate={{latitude: 33.780643409616545, longitude: -118.11203129233265}}
                     pinColor = "green"
+                    description="Near to: The Coffee Bean & Tea Leaf"
                 />
                 <Marker 
                     title = "Central Quad"
                     coordinate ={{latitude: 33.77803965450117, longitude: -118.11352004410354}}
                     pinColor = "green"
+                    description="Near to: CSULB University Library, Gatov Gallery"
                 />
                 <Marker 
                     title = "George Allen Field"
                     coordinate = {{latitude: 33.785996861998946, longitude: -118.110697264747}}
                     pinColor = "green"
+                    description="Near to: Softball Field, Rhodes Tennis Courts"
                 />
                 <Marker 
                     title = "Soccer and Softball Club House"
                     coordinate = {{latitude: 33.78677700599612, longitude: -118.11206775074483}}
                     pinColor = "green"
+                    description="Near to: Softball Field, Bob Cole Conservatory of Music"
                 />
                 {/*Atheltics*/}
 
@@ -322,21 +363,25 @@ export default function Map() {
                     title = "The Outpost Grill"
                     coordinate = {{latitude: 33.78262839754427, longitude: -118.11017035252026}}
                     pinColor = "orange"
+                    description="Near to: Vivian Engineering Center"
                 />
                 <Marker 
                     title = "The Nugget Grill & Pub"
                     coordinate = {{latitude: 33.780406214630815, longitude: -118.11451005576808}}
                     pinColor = "orange"
+                    description="Near to: CSULB Bookstore, The Chartroom"
                 />
                 <Marker 
                     title = "The Chartroom"
                     coordinate = {{latitude: 33.78072824900645, longitude: -118.11439221725203}}
                     pinColor = "orange"
+                    description="Near to: The Nugget Grill & Pub"
                 />
                 <Marker 
-                    title = "Pollo Loco"
+                    title = "El Pollo Loco"
                     coordinate = {{latitude: 33.781288656517646, longitude: -118.11359157786976}}
                     pinColor = "orange"
+                    description="Near to: University Student Union"
                 />
                 <Marker 
                     title = "The Coffee Bean & Tea Leaf"
@@ -504,16 +549,19 @@ export default function Map() {
                     title = "Lyman Lough Fountain"
                     coordinate = {{latitude: 33.78239537942915, longitude: -118.11475672687686}}
                     pinColor = "yellow"
+                    description="Near to: Brotman Hall"
                 />
                 <Marker 
                     title = "Go Beach Sign"
                     coordinate = {{latitude: 33.78195842917447, longitude: -118.1144241329775}}
                     pinColor = "yellow"
+                    description="Near to: University Student Union"
                 />
                 <Marker
                     title = "Earl Burns Miller Japanese Garden"
                     coordinate = {{latitude: 33.7852887152407, longitude: -118.11983588680643}}
                     pinColor = "yellow"
+                    description="Near to: Parkside College"
                 />
                 {/*Landmarks*/}
 
