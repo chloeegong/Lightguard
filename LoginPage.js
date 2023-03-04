@@ -24,85 +24,47 @@ export default function LoginPage({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text
-        style={{
-          top: "13%",
-          fontFamily: "Menlo-Bold",
-          fontSize: 30,
-          color: "#F9CB40"
-        }}
-      >
-        Lightguard
-      </Text>
 
-      <Text
-        style={{
-          top: "17.5%",
-          fontFamily: "Menlo",
-          fontSize: 16,
-          color: "white",
-        }}
-      >
-        Log in to get started!
-      </Text>
+      <View style={styles.topBotMargin} />
 
-      <StatusBar style="auto" />
+      <Text style={styles.titleText}>Lightguard</Text>
+
+      <Text style={styles.subtitleText}>Log in to get started!</Text>
 
       <Input
-        inputStyle={{
-          color: "white",
-          paddingLeft: "2%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          paddingTop: "8%",
-        }}
-        containerStyle={{ width: "80%", top: "7%" }}
+        inputStyle={styles.inputText}
+        containerStyle={{width: "80%"}}
         placeholder="Email"
-        leftIconContainerStyle={{
-          paddingTop: "70%",
-          paddingLeft: "5%",
-        }}
+        leftIconContainerStyle={styles.leftIconCont}
         leftIcon={{
           size: "12%",
           color: "white",
           type: "font-awesome",
-          name: "envelope",
-        }}
+          name: "envelope"}}
         onChangeText={setEmail}
       />
+
       <Input
         secureTextEntry={true}
-        inputStyle={{
-          color: "white",
-          paddingLeft: "3%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          paddingTop: "7%",
-        }}
-        containerStyle={{ width: "80%", bottom: "8%" }}
+        inputStyle={styles.inputText}
+        containerStyle={{width: "80%"}}
         placeholder="Password"
-        leftIconContainerStyle={{
-          paddingTop: "7%",
-          paddingLeft: "5%",
-        }}
+        leftIconContainerStyle={styles.leftIconCont}
         leftIcon={{
-          size: "17%",
+          size: "12%",
           color: "white",
           type: "font-awesome",
-          name: "lock",
-        }}
+          name: "lock"}}
         onChangeText={setPassword}
       />
+      
       <Button
-        title="Let's go!"
+        title="Let's go! 🏃"
         buttonStyle={{
           backgroundColor: "#A4A5F0",
-          borderWidth: 2,
-          borderColor: "#A4A5F0",
           borderRadius: 30,
         }}
         containerStyle={{
-          bottom: "2%",
           width: 200,
           marginHorizontal: 50,
           marginVertical: 10,
@@ -112,16 +74,10 @@ export default function LoginPage({ navigation }) {
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
-      <Text
-        style={{
-          //position: "absolute",
-          bottom: "11%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          color: "#FFFFFF",
-        }}
-      >
+
+      <Text style={styles.testLinks}>
         No account?{" "}
+        
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("SignUp");
@@ -132,21 +88,15 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+
+
       {/* Enter Map */}
       {/* Katrina */}
-      <Text
-        style={{
-          //position: "absolute",
-          bottom: "11%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          color: "#FFFFFF",
-        }}
-      >
+      <Text style={styles.testLinks}>
         Test Map:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Map");
+            navigation.navigate("MapPage");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
@@ -154,21 +104,14 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
-      {/* Test call emerg services */}
+
+      {/* Enter Test Call */}
       {/* Jocelyn */}
-      <Text
-        style={{
-          //position: "absolute",
-          bottom: "5%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          color: "#FFFFFF",
-        }}
-      >
-        Test Calling:{" "}
+      <Text style={styles.testLinks}>
+        Test Call:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("CallEmergServices");
+            navigation.navigate("CallEmergServicesPage");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
@@ -176,6 +119,9 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+
+      <View style={styles.topBotMargin} />
+    
     </View>
   );
 }
@@ -184,10 +130,36 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    alignItems: "flex-start",
-    changeDirection: "inherit",
     backgroundColor: "#181818",
+    justifyContent: "space-evenly",
     alignItems: "center",
-    justifyContent: "space-around",
   },
+  titleText: {
+    fontFamily: "Menlo-Bold",
+    fontSize: 30,
+    color: "#F9CB40"
+  },
+  subtitleText: {
+    fontFamily: "Menlo",
+    fontSize: 16,
+    color: "white"
+  },
+  inputText: {
+    color: "white",
+    paddingLeft: "2%",
+    fontFamily: "Menlo",
+    fontSize: 13,
+    paddingTop: "2%",
+  },
+  leftIconCont: {
+    paddingLeft: "5%",
+  },
+  testLinks: {
+    fontFamily: "Menlo",
+    fontSize: 13,
+    color: "#FFFFFF",
+  },
+  topBotMargin: {
+    height: "15%"
+  }
 });
