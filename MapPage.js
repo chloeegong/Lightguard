@@ -13,6 +13,7 @@ import { GOOGLE_MAPS_KEY } from '@env'; // Chloee
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"; // Chloee
 const smileImage = require('../Lightguard-client/assets/smile.png') // Katrina
 const flagImage = require('../Lightguard-client/assets/flag.png') // Katrina
+const lightImage = require('../Lightguard-client/assets/bluelight.png') // Miguel
 
 export default function Map() {
 
@@ -558,9 +559,386 @@ export default function Map() {
                 />
                 {/*Landmarks*/}
 
-                {/*College of Art*/}
+                {/*Faculty Offices*/}
+                <Marker 
+                    title = "Faculty Office 2"
+                    coordinate = {{latitude: 33.77866436604255, longitude: -118.11387958081058}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Faculty Office 3"
+                    coordinate = {{latitude: 33.779145192259435, longitude: -118.11372988645677}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Faculty Office 4"
+                    coordinate = {{latitude: 33.778124935989304, longitude: -118.11206879569679}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Faculty Office 5"
+                    coordinate = {{latitude: 33.779081925808875, longitude: -118.11239024894527}}
+                    pinColor = "grey"
+                />
+                {/*Faculty Offices*/}
 
                 {/*College of Art*/}
+                <Marker 
+                    title = "Fine Arts 1"
+                    coordinate = {{latitude: 33.77721977714551, longitude: -118.1125945086345}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Fine Arts 2"
+                    coordinate = {{latitude: 33.77749177169494, longitude: -118.11238529634296}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Fine Arts 3"
+                    coordinate = {{latitude: 33.7778618612522, longitude: -118.11211171103865}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Fine Arts 4"
+                    coordinate = {{latitude: 33.77824086697292, longitude: -118.11277689883738}}
+                    pinColor = "grey"
+                />
+                {/*College of Art*/}
+
+                {/*College of Business*/}
+                <Marker 
+                    title = "College of Business"
+                    coordinate = {{latitude: 33.78400783491321, longitude: -118.11592210130944}}
+                    pinColor = "grey"
+                />
+                {/*College of Business*/}
+
+                {/*College of Education*/}
+                <Marker 
+                    title = "Language Arts"
+                    coordinate = {{latitude: 33.77683184897635, longitude: -118.11254086451949}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Education 2"
+                    coordinate = {{latitude: 33.775706056565376, longitude: -118.11420500284946}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Bob and Barbara Ellis Education Building"
+                    coordinate = {{latitude: 33.77628336436989, longitude: -118.11405140425266}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "College of Professional and Continuing Education"
+                    coordinate = {{latitude: 33.78197535454163, longitude: -118.11123042964367}}
+                    pinColor = "grey"
+                />
+                {/*College of Education*/}
+
+                {/*College of Engineering*/}
+                <Marker 
+                    title = "Vivian Engineering Center"
+                    coordinate = {{latitude: 33.78287216859522, longitude: -118.11042157643493}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Engineering 2"
+                    coordinate = {{latitiude: 33.78315306244651, longitude: -118.1107058905747}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Engineering 3"
+                    coordinate = {{latitude: 33.78374159896689, longitude: -118.11121551023957}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Engineering and Computer Science"
+                    coordinate = {{latitude: 33.78356325499698, longitude: -118.11022577515243}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Engineering Technology"
+                    coordinate = {{latitude: 33.783014844954394, longitude: -118.10905633204442}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Human Design"
+                    coordinate = {{latitude: 33.782719854507235, longitude: -118.10969404338314}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Design"
+                    coordinate = {{latitude: 33.78212101812283, longitude: -118.10938266928451}}
+                    pinColor = "grey"
+                />
+                {/*College of Engineering*/}
+
+                {/*College of Health and Human Services*/}
+                <Marker 
+                    title = "Nursing"
+                    coordinate = {{latitude: 33.78169310254641, longitude: -118.11745431950753}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Family and Consumer Sciences"
+                    coordinate = {{latitude: 33.78176901997287, longitude: -118.11608931006417}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Kinesology"
+                    coordinate = {{latitude: 33.78312622937097, longitude: -118.11248136512131}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Health and Human Services 1"
+                    coordinate = {{latitude: 33.78237339054128, longitude: -118.11292537374946}}
+                    pinColor = "grey"
+                />
+                <Marker   
+                    title = "Health and Human Services 2"
+                    coordinate = {{latitude: 33.78243665456273, longitude: -118.11211347224975}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Social Science/Public Affairs"
+                    coordinate = {{latitude: 33.782046772244236, longitude: -118.11069367217141}}
+                    pinColor = "grey"
+                />
+                {/*College of Health and Human Services*/}
+
+                {/*College of Liberal Arts*/}
+                <Marker
+                    title = "Psychology"
+                    coordinate = {{latitude: 33.77924220073388, longitude: -118.11418150666374}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Peterson Hall"
+                    coordinate = {{latitude: 33.779073490278314, longitude: -118.11320722482935}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Liberal Arts 5"
+                    coordinate = {{latitude: 33.77885627508054, longitude: -118.11422463894334}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Liberal Arts 4"
+                    coordinate = {{latitude: 33.77857790139468, longitude: -118.11422463895167}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Liberal Arts 3"
+                    coordinate = {{latitude: 33.77822571520099, longitude: -118.11429060597276}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Liberal Arts 2"
+                    coordinate = {{latitude: 33.777983190941804, longitude: -118.11448343257894}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Liberal Arts 1"
+                    coordinate = {{latitude: 33.77763732907129, longitude: -118.11459506903515}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Lecture Halls"
+                    coordinate = {{latitude: 33.778177210405424, longitude: -118.11396838254484}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "College of Liberal Arts Adminstration"
+                    coordinate = {{latitude: 33.77781447800355, longitude: -118.11415106037934}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Multimedia Center"
+                    coordinate = {{latitiude: 33.776781342087695, longitude: -118.11460596595074}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "McIntosh Humanities Building"
+                    coordinate = {{latitude: 33.776895944490676, longitude: -118.11322486651447}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Language Arts Lab"
+                    coordinate = {{latitude: 33.77692125172217, longitude: -118.11277324629202}}
+                    pinColor = "grey"
+                />
+                {/*College of Liberal Arts*/}
+
+                {/*College of Natural Sciences and Mathematics*/}
+                <Marker 
+                    title = "Molecular and Life Sciences"
+                    coordinate = {{latitude: 33.780164693039325, longitude: -118.11244163978098}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Hall of Science"
+                    coordinate = {{latitude: 33.78004653526271, longitude: -118.11286811099036}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Microbiology"
+                    coordinate = {{latitude: 33.779463923701066, longitude: -118.11177653906492}}
+                    pinColor = "grey"
+                />
+                {/*College of Natural Sciences and Mathematics*/}
+
+                {/*Blue Lights & Safety*/}
+                <Marker 
+                    title = "University Police"
+                    coordinate = {{latitude: 33.784331751063014, longitude: -118.10911222496516}}
+                    pinColor = "red"
+                />
+                <Marker
+                    title = "Parkside Blue Light"
+                    coordinate = {{latitude: 33.78691723321143, longitude: -118.11959855093804}}
+                    pinColor = "blue"
+                    image = {lightImage}
+                />
+                <Marker 
+                    title = "G8 & 9 Blue Light"
+                    coordinate = {{latitude: 33.7878163182607, longitude: -118.11805031939947}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G7 Blue Light"
+                    coordinate = {{latitude: 33.78694524741096, longitude: -118.11638730812477}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G6 Blue Light"
+                    coordinate = {{latitude: 33.785632096074444, longitude: -118.1176946797564}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G5 Blue Light"
+                    coordinate = {{latitude: 33.78435533825395, longitude: -118.11699200250361}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G3 Blue Light"
+                    coordinate = {{latitude: 33.783361268575035, longitude: -118.11762985309798}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Hillside Blue Light"
+                    coordinate = {{latitude: 33.783081288841494, longitude: -118.11979007240407}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G1 Blue Light"
+                    coordinate = {{latitude: 33.78169428491899, longitude: -118.11921245405695}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "COB Blue Light"
+                    coordinate = {{latitude: 33.783839468352355, longitude: -118.11526716771307}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "GO BEACH Blue Light"
+                    coordinate = {{latitude: 33.78178121509987, longitude: -118.11468864680077}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker
+                    title = "H&HS Blue Light"
+                    coordinate = {{latitude: 33.7821646621626, longitude: -118.11265553239969}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Arts Center Blue Light"
+                    coordinate = {{latitude: 33.78788082834977, longitude: -118.11188361051634}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G12 Blue Light"
+                    coordinate = {{latitude: 33.788581962128525, longitude: -118.11056232990369}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G13 Blue Light"
+                    coordinate = {{latitude: 33.78731907227487, longitude: -118.10856325931915}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G14 Blue Light"
+                    coordinate = {{latitude: 33.786164336721875, longitude: -118.1085793525667}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "SRWC Blue Light"
+                    coordinate = {{latitude: 33.784907697401344, longitude: -118.1100212745718}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "COE Blue Light"
+                    coordinate = {{latitude: 33.783159105815564, longitude: -118.11042349237964}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Design Blue Light"
+                    coordinate = {{latitude: 33.782282375899555, longitude: -118.10870133901967}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Outpost Blue Light"
+                    coordinate = {{latitude: 33.78217536774267, longitude: -118.11050378344402}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "G15 Blue Light"
+                    coordinate = {{latitude: 33.778207869037786, longitude: -118.11171662267053}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Fine Art 1 Blue Light"
+                    coordinate = {{latitude: 33.77703736852293, longitude: -118.11234349409487}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker
+                    title = "E8 Blue Light"
+                    coordinate = {{latitude: 33.77619016504688, longitude: -118.11325008069156}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Liberal Arts 3 Blue Light"
+                    coordinate = {{latitude: 33.778336232763365, longitude: -118.11425113121322}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "LH Blue Light"
+                    coordinate = {{latitude: 33.77828049678519, longitude: -118.11353229919222}}
+                    image = {lightImage}
+                    pinColor = "blue"
+                />
+                {/*Blue Lights*/}
 
                 {/* End of map markers */}
 
