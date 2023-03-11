@@ -114,6 +114,16 @@ export default function Map() {
                     coordinate = {{latitude: 33.78437261706521, longitude: -118.10844770761423}}
                     pinColor = "blue"
                 />
+                <Marker 
+                    title = "Corner Market"
+                    coordinate = {{latitude: 33.78150563933455, longitude: -118.11419413471067}}
+                    pinColor = "blue"
+                />
+                <Marker 
+                    title = "Bookstore Convenience Store"
+                    coordinate = {{latitude: 33.77981616796349, longitude: -118.11387508034942}}
+                    pinColor = "blue"
+                />
                 {/*Stores*/}
 
                 {/* Student Institutions */}
@@ -135,6 +145,31 @@ export default function Map() {
                 <Marker 
                     title = "Student Health Services"
                     coordinate = {{latitude: 33.78254101100577, longitude: -118.11787996775904}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Horn Center"
+                    coordinate = {{latitude: 33.78324466158666, longitude: -118.11414312421232}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Academic Services"
+                    coordinate = {{latitude: 33.7767954201005, longitude: -118.1138694581425}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "CSULB Research Foundation"
+                    coordinate = {{latitude: 33.78126679149684, longitude: -118.1103578104239}}
+                    pinColor = "grey"
+                />
+                <Marker
+                    title = "Student Success Center"
+                    coordinate = {{latitude: 33.77944982838584, longitude: -118.11305487462116}}
+                    pinColor = "grey"
+                />
+                <Marker 
+                    title = "Alumni Center"
+                    coordinate = {{latitude: 33.78180333759347, longitude: -118.11694025455486}}
                     pinColor = "grey"
                 />
                 {/* Institutions */}
@@ -417,6 +452,16 @@ export default function Map() {
                     coordinate = {{latitude: 33.78606371209624, longitude: -118.10850946078669}}
                     pinColor = "purple"
                 />
+                <Marker 
+                    title = "General 15"
+                    coordinate = {{latitude: 33.77794171263901, longitude: -118.11164391560301}}
+                    pinColor = "purple"
+                />
+                <Marker 
+                    title = "Pyramid Parking Structure"
+                    coordinate = {{latitude: 33.7857490387966, longitude: -118.11568881784517}}
+                    pinColor = "purple"
+                />
                 <Marker
                     title = "Palo Verde North Parking Structure"
                     coordinate = {{latitude: 33.78761358354249, longitude: -118.109528347719}}
@@ -512,6 +557,10 @@ export default function Map() {
                     pinColor = "yellow"
                 />
                 {/*Landmarks*/}
+
+                {/*College of Art*/}
+
+                {/*College of Art*/}
 
                 {/* End of map markers */}
 
