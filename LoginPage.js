@@ -168,7 +168,28 @@ export default function LoginPage({ navigation }) {
         Test Calling:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("CallEmergServices");
+            navigation.navigate("CallEmergService");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      {/* Chloee */}
+      <Text
+        style={{
+          //position: "absolute",
+          bottom: "5%",
+          fontFamily: "Menlo",
+          fontSize: 13,
+          color: "#FFFFFF",
+        }}
+      >
+        Hazard:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Hazard");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
