@@ -7,15 +7,20 @@ import axios from 'axios';
 //calls emergency contact
 export default function CallEmergServicesPage({ navigation }) {
 
+    //making fetch api call to backend server
+    const initiateCall = async () => {
+      const source = axios.CancelToken.source();
+      const url = `http://localhost:3001/call-emerg`;
 
-  //making fetch api call to backend server
-  initiateCall = () => {
- 
-      fetch('http://localhost:3001/call-emerg', { method: 'GET' })
-        .then(data => data.json()) // Parsing the data into a JavaScript object
-        .then(json => alert(JSON.stringify(json))) // Displaying the stringified data in an alert popup
-        .catch(err => console.error(err))
-      return;
+      try {
+        const response = await axios.get(url, { cancelToken: source.token }).then(
+          data => data.json(), // Parsing the data into a JavaScript object
+          json => alert(JSON.stringify(json)) // Displaying the stringified data in an alert popup
+        ); 
+        console.log(response.data); 
+      } catch(error) {
+        console.error(error.response);
+      }
     }
 
 
@@ -38,7 +43,9 @@ export default function CallEmergServicesPage({ navigation }) {
             marginHorizontal: 110,
             marginVertical: 350,
           }}
-          onPress={this.initiateCall}
+          onPress={() => {
+            initiateCall(); 
+          }}
           titleStyle={{ fontFamily: "Menlo", fontSize: 18 }} />
       );
  
