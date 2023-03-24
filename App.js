@@ -30,7 +30,7 @@ function MyStack() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="CallEmergServices"
+        name="CallEmergService"
         component={CallEmergServicesPage}
         options={{ headerShown: false }}
       />
