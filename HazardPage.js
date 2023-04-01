@@ -1,7 +1,9 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
-import { Text, Button, Input, CheckBox, Icon } from "@rneui/themed";
+import axios from "axios";
 import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
+import NavBar from "./NavBar";
+import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
+import { Text, Button, CheckBox, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
 export default function HazardPage({ navigation }) {
@@ -9,6 +11,30 @@ export default function HazardPage({ navigation }) {
   const [check2, setCheck2] = useState(false);
   const [check3, setCheck3] = useState(false);
   const [check4, setCheck4] = useState(false);
+
+  const handleHazard = async () => {
+    console.log("res: " + setCheck1)
+    try {
+      const response = await axios.post('http://localhost:3001/api/hazard/add-hazard', {
+        check1,
+        check2,
+        check3,
+        check4
+      });
+ 
+      console.log(response.data);
+      navigation.navigate("Login"); // will edit route eventually
+
+      // reset checkbox states to false
+      // setCheck1(false);
+      // setCheck2(false);
+      // setCheck3(false);
+      // setCheck4(false);
+    } catch (error) {
+      console.error(error.response);
+    }
+  }
+ 
   return (
     <View style={styles.container}>
       <Text
@@ -26,28 +52,29 @@ export default function HazardPage({ navigation }) {
         center
         title="Criminal Activity"
         checked={check1}
-        onPress={() => setCheck1(!check1)}
+        onIconPress={() => setCheck1(!check1)}
+        onChange={!check1}
       />
       <CheckBox
         {...boxStyle}
         center
         title="Construction"
         checked={check2}
-        onPress={() => setCheck2(!check2)}
+        onIconPress={() => setCheck2(!check2)}
       />
       <CheckBox
         {...boxStyle}
         center
         title="Blocked Path"
         checked={check3}
-        onPress={() => setCheck3(!check3)}
+        onIconPress={() => setCheck3(!check3)}
       />
       <CheckBox
         {...boxStyle}
         center
         title="Other"
         checked={check4}
-        onPress={() => setCheck4(!check4)}
+        onIconPress={() => setCheck4(!check4)}
       />
       <Button
         title="Report"
@@ -64,10 +91,12 @@ export default function HazardPage({ navigation }) {
           marginVertical: 10,
         }}
         onPress={() => {
-          navigation.navigate("Login");
+          handleHazard(); 
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+
+    <NavBar/>
     </View>
   );
 }
