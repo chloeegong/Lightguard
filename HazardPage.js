@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
+import NavBar from "./NavBar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, CheckBox, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
@@ -94,6 +95,8 @@ export default function HazardPage({ navigation }) {
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+
+    <NavBar/>
     </View>
   );
 }
