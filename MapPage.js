@@ -5,7 +5,7 @@
 
 import * as React from "react";
 import * as Location from 'expo-location'
-import { StyleSheet, Text, TextInputComponent, View } from "react-native";
+import { Pressable, StyleSheet, Text, TextInputComponent, View } from "react-native";
 import Constants from "expo-constants";
 import MapView, { Marker, Polyline } from "react-native-maps"; // Chloee
 import MapViewDirections from "react-native-maps-directions"; // Chloee
@@ -13,6 +13,7 @@ import { GOOGLE_MAPS_KEY } from '@env'; // Chloee
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"; // Chloee
 const smileImage = require('../Lightguard-client/assets/smile.png') // Katrina
 const flagImage = require('../Lightguard-client/assets/flag.png') // Katrina
+import NavBar from "./NavBar";
 
 export default function Map() {
 
@@ -630,6 +631,10 @@ export default function Map() {
                     />
                 
             </View>
+
+        <NavBar/>
+
+
         </View>
     )
 }
