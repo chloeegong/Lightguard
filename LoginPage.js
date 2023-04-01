@@ -145,7 +145,7 @@ export default function LoginPage({ navigation }) {
         Test Calling:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("CallEmergServices");
+            navigation.navigate("SafetyButton");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>

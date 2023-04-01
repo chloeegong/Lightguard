@@ -8,6 +8,9 @@ import SignUpPage from "./SignUpPage";
 import HazardPage from "./HazardPage";
 import MapPage from "./MapPage";
 import CallEmergServicesPage from "./CallEmergServicesPage";
+import SafetyButtonPage from "./SafetyButtonPage";
+import SBCancelMessagePage from "./SBCancelMessagePage";
+import SBMessageLocationPage from "./SBMessageLocationPage";
 
 const Stack = createStackNavigator();
 
@@ -30,8 +33,18 @@ function MyStack() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="CallEmergServices"
-        component={CallEmergServicesPage}
+        name="SafetyButton"
+        component={SafetyButtonPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SBCancelMessage"
+        component={SBCancelMessagePage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SBMessageLocation"
+        component={SBMessageLocationPage}
         options={{ headerShown: false }}
       />
       <Stack.Screen
