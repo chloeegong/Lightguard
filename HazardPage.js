@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import NavBar from "./NavBar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, CheckBox, Icon } from "@rneui/themed";
 import React, { useState } from "react";
@@ -68,6 +69,8 @@ export default function HazardPage({ navigation }) {
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+
+    <NavBar/>
     </View>
   );
 }

@@ -13,6 +13,7 @@ import { GOOGLE_MAPS_KEY } from '@env'; // Chloee
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"; // Chloee
 const smileImage = require('../Lightguard-client/assets/smile.png') // Katrina
 const flagImage = require('../Lightguard-client/assets/flag.png') // Katrina
+const sirenImage = require('../Lightguard-client/assets/siren.png') // Jocelyn
 import NavBar from "./NavBar";
 
 export default function Map() {
@@ -97,6 +98,15 @@ export default function Map() {
                     draggable
                     coordinate = {destination} 
                     onDragEnd = {e => setDestination(e.nativeEvent.coordinate)}
+                />
+
+                {/* Crime Hotspots */}
+                {/* Katrina + Jocelyn */}
+                <Marker 
+                    title = "🚨 Crime Reported" // Katrina
+                    coordinate={{latitude: 33.78682962192349, longitude: -118.117}} // Katrina
+                    image={sirenImage} // Jocelyn
+                    description="ROBBERY Reported on 4/2/22 at 10:17 PM" // Katrina
                 />
 
                 {/* Beginning of Map markers */}
