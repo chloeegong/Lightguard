@@ -48,6 +48,11 @@ function MyStack() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
+        name="CallEmergServices"
+        component={CallEmergServicesPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         name="Map"
         component={MapPage}
         options={{ headerShown: false }}

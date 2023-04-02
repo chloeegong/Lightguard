@@ -111,7 +111,20 @@ export default function LoginPage({ navigation }) {
         Test Call:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("CallEmergService");
+            navigation.navigate("CallEmergServices");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      {/* Enter Test Safety Button */}
+      <Text style={styles.testLinks}>
+        Test Safety Button:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("SafetyButton");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
@@ -123,7 +136,7 @@ export default function LoginPage({ navigation }) {
       <Text
         style={{
           //position: "absolute",
-          bottom: "5%",
+          bottom: "0.2%",
           fontFamily: "Menlo",
           fontSize: 13,
           color: "#FFFFFF",
@@ -132,7 +145,7 @@ export default function LoginPage({ navigation }) {
         Hazard:{" "}
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("SafetyButton");
+            navigation.navigate("Hazard");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
