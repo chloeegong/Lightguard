@@ -2,11 +2,23 @@
 import { Button, ThemeProvider, Input } from '@rneui/themed';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import axios from 'axios';
+import React, {useState} from 'react';
 
 
 //calls emergency contact
 export default function CallEmergServicesPage({ navigation }) {
+  
+  const handleCall= async() => {
+    try {
+      const response = await axios.post('http://localhost:3001/message_contact'
+      );
+      //console.log(response.data);
+      navigation.navigate("Map");
+    } catch (error) {
+      console.error(error.response);
+    }
 
+  };
 
   //making fetch api call to backend server
   initiateCall = () => {
@@ -38,7 +50,7 @@ export default function CallEmergServicesPage({ navigation }) {
             marginHorizontal: 110,
             marginVertical: 350,
           }}
-          onPress={this.initiateCall}
+          onPress={handleCall()}
           titleStyle={{ fontFamily: "Menlo", fontSize: 18 }} />
       );
  

@@ -13,6 +13,7 @@ import { GOOGLE_MAPS_KEY } from '@env'; // Chloee
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"; // Chloee
 const smileImage = require('../Lightguard-client/assets/smile.png') // Katrina
 const flagImage = require('../Lightguard-client/assets/flag.png') // Katrina
+const steetLampImage = require('../Lightguard-client/assets/street-lamp.png') //Jocelyn
 const sirenImage = require('../Lightguard-client/assets/siren.png') // Jocelyn
 import NavBar from "./NavBar";
 
@@ -34,6 +35,114 @@ export default function Map() {
 
     {/* Set light destinations */}
     {/* Jocelyn */}
+
+    const lampDeukmejianWayN1 = {latitude: 33.784066, longitude: -118.110767}
+
+    const lampDeukmejianWayN2 = {latitude: 33.784070, longitude: -118.111260}
+
+    const lampDeukmejianWayE1 = {latitude: 33.783933, longitude: -118.110065}
+
+    const lampDeukmejianWayE2 = {latitude: 33.783297, longitude: -118.110078}
+
+    const lampDeukmejianWayE3 = {latitude: 33.782075, longitude: -118.110058}
+
+    const lampLifeFitCorner = {latitude: 33.783659, longitude: -118.111582}
+
+    const lampHornCenterN = {latitude: 33.783743, longitude: -118.114116}
+
+    const lampHornCenterNCorner = {latitude: 33.783757, longitude: -118.114489}
+
+    const lampCarolynArtMuseumN = {latitude: 33.783803, longitude: -118.114791}
+
+    const lampCarolynArtMuseumNW = {latitude: 33.783805, longitude: -118.115058}
+
+    const lampCarolynArtMuseumW = {latitude: 33.783695, longitude: -118.115174}
+
+    const lampBusinessE = {latitude: 33.783795, longitude: -118.115392}
+
+    const lampBusinessSECorner = {latitude: 33.783649, longitude: -118.1115506}
+
+    const lampStrawSculptor = {latitude: 33.783583, longitude: -118.115382}
+
+    const lampBusinessSE = {latitude: 33.783787, longitude: -118.115875}
+
+    const lampBusinessSW = {latitude: 33.784111, longitude: -118.116534}
+
+    const lampUnderMerriamWayTunnel = {latitude: 33.784411, longitude: -118.117096}
+
+    const lampG4WalkingPathCorner = {latitude: 33.783750, longitude: -118.117647}
+
+    const lampLosAlLawnE = {latitude: 33.783427, longitude: -118.117826}
+
+    const lampLosAlLawnSECorner = {latitude: 33.783166, longitude: -118.118022}
+
+    //WCentral
+    const lampPyramidS = {latitude: 33.786689, longitude:  -118.114677}
+
+    const lampParksidePathway = {latitude: 33.786916, longitude:  -118.119364}
+
+    const lampSHSS = {latitude: 33.782107, longitude:  -118.118155}
+
+    const lampBrotmanE = {latitude: 33.782579, longitude:  -118.114675}
+
+    const lampGeorgeAllenFieldE = {latitude: 33.786744,  longitude: -118.109984}
+
+    //right T
+    const lampStateUniversityDr1 = {latitude: 33.781568, longitude:  -118.110436}
+
+    const lampStateUniversityDr2 = {latitude: 33.781581, longitude:  -118.111353}
+
+    const lampECampusDrLoop = {latitude: 33.781146, longitude:  -118.111988}
+
+    const lampECampusDrSidewalk = {latitude: 33.780419, longitude: -118.111708}
+
+    //LowerCampus
+    const lampCentralPlantS = {latitude: 33.781646, longitude: -118.112571}
+
+    const lampUpperLowerCampusStairs1 = {latitude: 33.781646, longitude: -118.112617}
+
+    const lampUpperLowerCampusStairs2 = {latitude: 33.780268, longitude:  -118.113092}
+
+    const lampMLSCS = {latitude: 33.780106,  longitude: -118.112568}
+
+    const lampHSCIW = {latitude: 33.779947,  longitude: -118.113325}
+
+    const lampSSCW = {latitude: 33.779715, longitude: -118.113396}
+
+    const lampFO3N = {latitude: 33.779579, longitude: -118.113593}
+
+    const lampCentralQuadW1 = {latitude: 33.778623, longitude: -118.113576}
+
+    const lampCentralQuadDiagnol = {latitude: 33.778518, longitude: -118.113284}
+
+    const lampCentralQuadMiddel = {latitude: 33.778185, longitude:  -118.113361}
+
+    const lampCentralQuadS = {latitude: 33.777285,  longitude: -118.113697}
+
+    const lampMHBW = {latitude: 33.777023, longitude: -118.113395}
+
+    const lampUTN = {latitude: 33.776968, longitude: -118.111826}
+
+    const lampLibraryCenterN = {latitude: 33.777426, longitude: -118.114377}
+
+    const lampLibraryW = {latitude: 33.777512, longitude: -118.115217}
+
+    const lampLA2W = {latitude: 33.777997, longitude: -118.115082}
+
+    const lampLA2N = {latitude: 33.777852,  longitude: -118.114594}
+
+    const lampLA2E = {latitude: 33.777718, longitude: -118.114291}
+
+    const lampLA4E = {latitude: 33.778412, longitude: -118.114063}
+
+    const lampLA5S = {latitude: 33.778711, longitude: -118.114145}
+    
+    //Bookstore
+    const lampBookstoreSE = {latitude: 33.779746, longitude:  -118.113773}
+
+    const lampBookstoreE = {latitude: 33.780163, longitude: -118.113412}
+
+    const lampNuggetE = {latitude: 33.780300,  longitude: -118.113762}
 
 
     {/* Ask permission from user to use their location. */}
@@ -71,6 +180,52 @@ export default function Map() {
                     longitudeDelta: 0.1
                 }}
                 >
+                    
+                {/*Street Lamps*/}
+                {/* Jocelyn */}
+                <Marker
+                    title = "Lamp - Deukmejian Way 1"
+                    coordinate = {{latitude: 33.784066, longitude: -118.110767}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - George Allen Field"
+                    coordinate = {{latitude: 33.786744,  longitude: -118.109984}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Parkside"
+                    coordinate = {{latitude: 33.786916, longitude:  -118.119364}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Business E"
+                    coordinate = {{latitude: 33.783795, longitude: -118.115392}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Central Plant"
+                    coordinate = {{latitude: 33.781646, longitude: -118.112571}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Los Al Lawn E"
+                    coordinate = {{latitude: 33.783427, longitude: -118.117826}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Library"
+                    coordinate = {{latitude: 33.777426, longitude: -118.114377}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Pyramid"
+                    coordinate = {{latitude: 33.786689, longitude:  -118.114677}}
+                    image={steetLampImage}
+                />
+
+
+
                 {/* Create map pin for origin. It can be dragged to set a new origin. */}
                 {/* Katrina */}
                 <Marker 
