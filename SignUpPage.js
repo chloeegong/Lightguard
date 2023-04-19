@@ -5,6 +5,7 @@ import { StyleSheet, View } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
+//This is our SignUpPage
 export default function SignUpPage({ navigation }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -39,7 +40,9 @@ export default function SignUpPage({ navigation }) {
   };
 
   return (
+    //This view encapsulates all of our elements
     <View style={styles.container}>
+      {/** Text Element for our Title*/}
       <Text
         style={{
           top: "13%",
@@ -50,9 +53,9 @@ export default function SignUpPage({ navigation }) {
       >
         Sign Up
       </Text>
-
+      {/** This is the status bar, the bar on top of the phone that shows battery life and time*/}
       <StatusBar style="auto" />
-
+      {/** Input element for SignUp first and last name*/}
       <Input
         {...inputStyles}
         containerStyle={{ width: "80%", top: "15%" }}
@@ -77,6 +80,7 @@ export default function SignUpPage({ navigation }) {
         }}
         onChangeText={setLastName}
       />
+      {/** Input element for SignUp Email*/}
       <Input
         {...inputStyles}
         containerStyle={{ width: "80%", top: "1%" }}
@@ -89,10 +93,12 @@ export default function SignUpPage({ navigation }) {
         }}
         onChangeText={setEmail}
       />
+      {/** Input element for SignUp password*/}
       <Input
         {...inputStyles}
         {...secureStyles}
         containerStyle={{ width: "80%", bottom: "6%" }}
+        secureTextEntry={true}
         placeholder="Password"
         leftIcon={{
           size: "17%",
@@ -102,10 +108,12 @@ export default function SignUpPage({ navigation }) {
         }}
         onChangeText={setPassword}
       />
+      {/** Input element for password confirmation*/}
       <Input
         {...inputStyles}
         {...secureStyles}
         containerStyle={{ width: "80%", bottom: "13%" }}
+        secureTextEntry={true}
         placeholder="Confirm Password"
         leftIcon={{
           size: "17%",
@@ -115,6 +123,7 @@ export default function SignUpPage({ navigation }) {
         }}
         onChangeText={setConfirmPassword}
       />
+      {/** Input element for signup phone number*/}
       <Input
         {...inputStyles}
         containerStyle={{ width: "80%", bottom: "20%" }}
@@ -127,6 +136,7 @@ export default function SignUpPage({ navigation }) {
         }}
         onChangeText={setPhoneNumber}
       />
+      {/** Button element for completing the sign up*/}
       <Button
         title="Next step"
         buttonStyle={{
@@ -150,6 +160,7 @@ export default function SignUpPage({ navigation }) {
   );
 }
 
+//Styling used for the view everything is incapsulated in
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -161,8 +172,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
 });
+//Styling used for the all of the inputs
 const inputStyles = {
-  // secureTextEntry: true,
   inputStyle: {
     color: "white",
     paddingLeft: "3%",

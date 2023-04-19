@@ -6,6 +6,7 @@ import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, CheckBox, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
+//This is our HazardPage
 export default function HazardPage({ navigation }) {
   const [criminalActivity, setCriminalActivity] = useState(false);
   const [construction, setConstruction] = useState(false);
@@ -27,9 +28,11 @@ export default function HazardPage({ navigation }) {
       console.error(error.response);
     }
   }
- 
+
   return (
+    //This view encapsulates all of our elements
     <View style={styles.container}>
+      {/** Text Element for our Title*/}
       <Text
         style={{
           top: "20%",
@@ -40,6 +43,7 @@ export default function HazardPage({ navigation }) {
       >
         Hazard Reporting
       </Text>
+      {/** CheckBox Element for our users to select what hazard they are reporting*/}
       <CheckBox
         {...boxStyle}
         center
@@ -68,6 +72,7 @@ export default function HazardPage({ navigation }) {
         checked={other}
         onPress={() => setOther(!other)}
       />
+      {/** Button element to submit the report, temporarily leads to the login page again*/}
       <Button
         title="Report"
         buttonStyle={{
@@ -92,10 +97,12 @@ export default function HazardPage({ navigation }) {
     </View>
   );
 }
+//Styling used for all of the textboxes
 const boxStyle = {
   textStyle: { fontSize: "15px", color: "white" },
   containerStyle: { top: "28%", backgroundColor: "#181818" },
 };
+//Styling used for the view everything is incapsulated in
 const styles = StyleSheet.create({
   container: {
     flex: 1,
