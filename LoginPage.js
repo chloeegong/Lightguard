@@ -132,16 +132,9 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+      {/* Enter Hazard Reporting */}
       {/* Chloee */}
-      <Text
-        style={{
-          //position: "absolute",
-          bottom: "0.2%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          color: "#FFFFFF",
-        }}
-      >
+      <Text style={styles.testLinks}>
         Hazard:{" "}
         <TouchableOpacity
           onPress={() => {
@@ -153,7 +146,19 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
-
+      {/* Enter Hazard Summary */}
+      <Text style={styles.testLinks}>
+        Hazard Summary:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("HazardSummary");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
       <View style={styles.topBotMargin} />
     
     </View>
