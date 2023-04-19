@@ -12,20 +12,23 @@ export default function SignUpPage({ navigation }) {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [emergencyContacts, setEmergencyContacts] = useState([]); 
 
   const handleSignUp = async () => {
-    // console.log(setFirstName); 
-    // if (setPassword != setConfirmPassword) {
-    //   console.log("Passwords do not match"); 
-    //   return; 
-    // } 
+    // password and confirmPassword verification 
+    if (password != confirmPassword) {
+      console.log("Passwords do not match"); 
+      return; 
+    } 
+
     try {
       const response = await axios.post('http://localhost:3001/auth/users/student-register', {
         firstName,
         lastName,
         email,
         password,
-        phoneNumber
+        phoneNumber, 
+        emergencyContacts
       });
 
       console.log(response.data); 
