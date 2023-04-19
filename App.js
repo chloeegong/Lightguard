@@ -7,6 +7,9 @@ import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
 import HazardPage from "./HazardPage";
 import SchedulePath from "./SchedulePath";
+import SavedPaths from "./SavedPathsPage";
+import PathSummary from "./PathSummaryPage";
+import ProfilePage from "./ProfilePage";
 
 //Creates the StackNavigator, which allows us to add screens in the stack and navigate to other screens
 const Stack = createStackNavigator();
@@ -17,8 +20,18 @@ function MyStack() {
     //This is a function for our Stack we made earlier, we are adding screens such as LoginPage, SignUpPage, and HazardPage
     <Stack.Navigator>
       <Stack.Screen
+        name="ProfilePage"
+        component={ProfilePage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
         name="SchedulePath"
         component={SchedulePath}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SavedPaths"
+        component={SavedPaths}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -34,6 +47,11 @@ function MyStack() {
       <Stack.Screen
         name="Hazard"
         component={HazardPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="PathSummary"
+        component={PathSummary}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

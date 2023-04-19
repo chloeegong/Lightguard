@@ -2,7 +2,6 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, CheckBox, Switch, Icon } from "@rneui/themed";
 import React, { useState } from "react";
-//import { wrap } from "module";
 
 //This is our SchedulePath page
 export default function SchedulePath({ navigation }) {
@@ -96,17 +95,17 @@ export default function SchedulePath({ navigation }) {
           name: "map-pin",
         }}
       />
-      {/** more text */}
+      {/** Text Element for Time */}
       <Text
         style={{
           top: "5%",
-          right: "21%",
+          right: "33.4%",
           fontFamily: "Menlo-Bold",
           fontSize: 20,
           color: "#F9CB40",
         }}
       >
-        Time and Day
+        Time
       </Text>
       <Text
         style={{
@@ -127,13 +126,10 @@ export default function SchedulePath({ navigation }) {
           fontFamily: "Menlo",
           fontSize: 13,
           paddingTop: "8%",
+          top: "10%",
         }}
         containerStyle={{ width: "20%", top: "5%", right: "10%" }}
         placeholder="00:00"
-        leftIconContainerStyle={{
-          paddingTop: "7%",
-          paddingLeft: "5%",
-        }}
       />
       {/** Input element for AM/PM*/}
       <Input
@@ -144,8 +140,9 @@ export default function SchedulePath({ navigation }) {
           fontFamily: "Menlo",
           fontSize: 13,
           paddingTop: "55%",
+          bottom: "3%",
         }}
-        containerStyle={{ width: "15%", bottom: "5%", left: "5%" }}
+        containerStyle={{ width: "15%", bottom: "5.3%", left: "5%" }}
         placeholder="AM"
       />
       {/**need filter text */}
@@ -228,6 +225,9 @@ export default function SchedulePath({ navigation }) {
           width: 200,
           marginHorizontal: 50,
           marginVertical: 10,
+        }}
+        onPress={() => {
+          navigation.navigate("SavedPaths");
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
