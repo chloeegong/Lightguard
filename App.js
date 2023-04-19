@@ -10,7 +10,7 @@ import SchedulePath from "./SchedulePath";
 import SavedPaths from "./SavedPathsPage";
 import PathSummary from "./PathSummaryPage";
 import ProfilePage from "./ProfilePage";
-import HazardSummaryPage from "./HazardSummaryPage"; 
+import HazardSummaryPage from "./HazardSummaryPage";
 import MapPage from "./MapPage";
 import CallEmergServicesPage from "./CallEmergServicesPage";
 import SafetyButtonPage from "./SafetyButtonPage";
@@ -26,8 +26,8 @@ function MyStack() {
     //This is a function for our Stack we made earlier, we are adding screens such as LoginPage, SignUpPage, and HazardPage
     <Stack.Navigator>
       <Stack.Screen
-        name="ProfilePage"
-        component={ProfilePage}
+        name="Login"
+        component={LoginPage}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -38,11 +38,6 @@ function MyStack() {
       <Stack.Screen
         name="SavedPaths"
         component={SavedPaths}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="Login"
-        component={LoginPage}
         options={{ headerShown: false }}
       />
       <Stack.Screen
@@ -88,6 +83,11 @@ function MyStack() {
       <Stack.Screen
         name="Map"
         component={MapPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ProfilePage"
+        component={ProfilePage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
