@@ -37,6 +37,308 @@ export default function Map() {
         getLocationPermission();
     }, [])
 
+    {/*Start of array of coordinates for ADA paths by Miguel*/}
+
+    const bell_7th = [
+        {latitude: 33.782165530157954, longitude: -118.12080065231353},
+        {latitude: 33.782114109339325, longitude: -118.1149456504733},
+        {latitude: 33.78182875338096, longitude: -118.1146774296201},
+        {latitude: 33.78147205710277, longitude: -118.11484909098749},
+        {latitude: 33.78132457327888, longitude: -118.11501086431588},
+        {latitude: 33.781035307589796, longitude: -118.11514862454332},
+        {latitude: 33.78040807117033, longitude: -118.11520686564855},
+        {latitude: 33.78040807117033, longitude: -118.11520686564855},
+        {latitude: 33.77895685994329, longitude: -118.11521453833818},
+        {latitude: 33.778762655564556, longitude: -118.11516867097787},
+        {latitude: 33.778597677814865, longitude: -118.11498896298384},
+        {latitude: 33.7783546694697, longitude: -118.1149540942686},
+        {latitude: 33.77826549192242, longitude: -118.11505601820551},
+        {latitude: 33.777971205352394, longitude: -118.11507479367069},
+        {latitude: 33.77760334571538, longitude: -118.11515525993798},
+        {latitude: 33.777471807636886, longitude: -118.1152276795729},
+        {latitude: 33.777003619649165, longitude: -118.11525181945046},
+    ];
+
+    const bell_Beach = [
+        {latitude: 33.78188934387241, longitude: -118.12212256816346},
+        {latitude: 33.78189211772415, longitude: -118.11541183154684},
+        {latitude: 33.78177619168245, longitude: -118.11574442544621},
+    ];
+
+    const deter_ParksideNorth = [
+        {latitude: 33.78226379974979, longitude: -118.12080380502358},
+        {latitude: 33.78354788752802, longitude: -118.12018153256669},
+        {latitude: 33.784444062409584, longitude: -118.11953243795381},
+        {latitude: 33.785099467932916, longitude: -118.11906036919339},
+        {latitude: 33.785317935331356, longitude: -118.11892625874239},
+        {latitude: 33.78544723210861, longitude: -118.11918911521629},
+        {latitude: 33.78583957973847, longitude: -118.11901208942844},
+        {latitude: 33.78640134705373, longitude: -118.11920520846678},
+        {latitude: 33.7876809144199, longitude: -118.11921057287917},
+    ];
+    
+    const commons_Village = [
+        {latitude: 33.7869140679883, longitude: -118.119881125112},
+        {latitude: 33.786905151128956, longitude: -118.1189638096799},
+    ];
+    
+    const atherton_CDC = [
+        {latitude: 33.788609088718985, longitude: -118.12024977100612},
+        {latitude: 33.78822121215773, longitude: -118.1202444065884},
+        {latitude: 33.78801347045731, longitude: -118.1204886148959},
+        {latitude: 33.787801697516215, longitude: -118.12061736092146},
+        {latitude: 33.787815072664856, longitude: -118.12083193763074},
+    ];
+    
+    const g4_SSH = [
+        {latitude: 33.784509273485774, longitude: -118.11934163212113},
+        {latitude: 33.784094626897065, longitude: -118.118531605024},
+        {latitude: 33.78398762099811, longitude: -118.11857720256246},
+        {latitude: 33.783577430485515, longitude: -118.1177618110355},
+        {latitude: 33.78349912228216, longitude: -118.11763577755656},
+        {latitude: 33.783022049967, longitude: -118.11799251135078},
+        {latitude: 33.78267204662878, longitude: -118.11815880830538},
+        {latitude: 33.78213031889866, longitude: -118.11820172364587},
+    ];
+    
+    const g3_Brotman = [
+        {latitude: 33.78344458954183, longitude: -118.1176379099612},
+        {latitude: 33.782667962941524, longitude: -118.11602156447599},
+        {latitude: 33.78252751533189, longitude: -118.1160135178372},
+        {latitude: 33.782132923199526, longitude: -118.11550389813522},
+    ];
+    
+    const g6_Brotman = [
+        {latitude: 33.78531052146516, longitude: -118.11888931899595},
+        {latitude: 33.78370395731945, longitude: -118.11572598453392},
+        {latitude: 33.78345650484663, longitude: -118.11509298320551},
+        {latitude: 33.78317784129975, longitude: -118.114682605221},
+        {latitude: 33.78176890451278, longitude: -118.114604821145},
+    ];
+    
+    const g11_Brotman = [
+        {latitude: 33.788549469946624, longitude: -118.11529157700394},
+        {latitude: 33.78422722154439, longitude: -118.11523674782556},
+    ];
+    
+    const g11_Walter_1 = [
+        {latitude: 33.786717037346335, longitude: -118.11527341434896},
+        {latitude: 33.786873082593466, longitude: -118.11434268787252},
+        {latitude: 33.78699791858645, longitude: -118.11437219217005},
+    ];
+    
+    const g11_Walter_2 = [
+        {latitude: 33.78805232964647, longitude: -118.1152492744528},
+        {latitude: 33.78817270555635, longitude: -118.11388671232912},
+        {latitude: 33.78811162146641, longitude: -118.11385088567584},
+        {latitude: 33.78750082299755, longitude: -118.11377846603648},
+        {latitude: 33.78748967699962, longitude: -118.11388843659998},
+    ];
+    
+    const walter_Carpenter = [
+        {latitude: 33.78817270555635, longitude: -118.11388671232912},
+        {latitude: 33.78820524712397, longitude: -118.11368995314392},
+        {latitude: 33.787861952545775, longitude: -118.11366044884636},
+        {latitude: 33.78796003685152, longitude: -118.11301135427297},
+        {latitude: 33.787982328722485, longitude: -118.11272972229794},
+        {latitude: 33.78792436984329, longitude: -118.11237298851877},
+        {latitude: 33.78780697639188, longitude: -118.1114170929934},
+        {latitude: 33.78812797936224, longitude: -118.11136613102495},
+        {latitude: 33.788125750179084, longitude: -118.11146269054412},
+    ];
+    
+    const walter_Engr2 = [
+        {latitude: 33.787793601230646, longitude: -118.11130175799116},
+        {latitude: 33.787327698872595, longitude: -118.11132053345322},
+        {latitude: 33.78732546966863, longitude: -118.11158875433979},
+        {latitude: 33.78716719603779, longitude: -118.11156193225113},
+        {latitude: 33.78709809055793, longitude: -118.11148951261177},
+        {latitude: 33.7832597995161, longitude: -118.1114850217318},
+        {latitude: 33.78327006284734, longitude: -118.11143254105089},
+        {latitude: 33.7832597995161, longitude: -118.11110839566891},
+    ];
+    
+    const engr2_COB = [
+        {latitude: 33.783601049535534, longitude: -118.11147819430332},
+        {latitude: 33.783622836471636, longitude: -118.11336620839425},
+        {latitude: 33.78370632081989, longitude: -118.11384248486094},
+        {latitude: 33.783741411217086, longitude: -118.11437022834005},
+        {latitude: 33.78376772900654, longitude: -118.11475020360173},
+        {latitude: 33.78378966049155, longitude: -118.11502463017965},
+        {latitude: 33.78392563557338, longitude: -118.11524628241561},
+    ];
+    
+    const tennis_G12 = [
+        {latitude: 33.78415718068712, longitude: -118.11149992745331},
+        {latitude: 33.78413963557484, longitude: -118.10999058127493},
+        {latitude: 33.78553884701044, longitude: -118.1099641940465},
+        {latitude: 33.78562218490008, longitude: -118.11003280069097},
+        {latitude: 33.78667486706922, longitude: -118.11003807812224},
+        {latitude: 33.78678890685856, longitude: -118.10996947147774},
+        {latitude: 33.786876629670054, longitude: -118.10981642588624},
+    ];
+    
+    const e5 = [
+        {latitude: 33.7844330191056, longitude: -118.10999372375436},
+        {latitude: 33.78444617789505, longitude: -118.10816773152457},
+    ];
+      
+    const tennis_Affairs = [
+        {latitude: 33.784143525217566, longitude: -118.10998844633981},
+        {latitude: 33.7840838433773, longitude: -118.10999742253551},
+        {latitude: 33.78401134360346, longitude: -118.11010693370478},
+        {latitude: 33.78396309445388, longitude: -118.11009769819496},
+        {latitude: 33.78312530942265, longitude: -118.11009637883873},
+        {latitude: 33.78233960609393, longitude: -118.1101138769595},
+        {latitude: 33.78162244652961, longitude: -118.11012282182682},
+    ];
+    
+    const affairs_Education = [
+        {latitude: 33.78162244652961, longitude: -118.11012282182682},
+        {latitude: 33.78161416057769, longitude: -118.11105517398174},
+        {latitude: 33.78159899998135, longitude: -118.11186591378056},
+        {latitude: 33.78160916862526, longitude: -118.11191135522324},
+        {latitude: 33.78174571886934, longitude: -118.11171211197465},
+        {latitude: 33.78190405877338, longitude: -118.11168414800993},
+        {latitude: 33.78191858536098, longitude: -118.11137304890008},
+    ];
+    
+    const engr2_Education = [
+        {latitude: 33.7832597995161, longitude: -118.1114850217318},
+        {latitude: 33.78248302894458, longitude: -118.1115005705607},
+        {latitude: 33.78191649415121, longitude: -118.11150057056805},
+    ];
+    
+    const business_Engr3 = [
+        {latitude: 33.78360055506475, longitude: -118.11515637156475},
+        {latitude: 33.78359609646267, longitude: -118.11505444762784},
+        {latitude: 33.783515841585775, longitude: -118.1149954390328},
+        {latitude: 33.78333303852983, longitude: -118.11491497276683},
+        {latitude: 33.7832750765038, longitude: -118.11481036662106},
+        {latitude: 33.78322157306033, longitude: -118.11470576047529},
+        {latitude: 33.783234948924346, longitude: -118.1146655273423},
+        {latitude: 33.78322380237113, longitude: -118.11461992979157},
+        {latitude: 33.783188133391185, longitude: -118.11459578991182},
+        {latitude: 33.783121254013736, longitude: -118.11453141689901},
+        {latitude: 33.783036540060664, longitude: -118.11438925982912},
+        {latitude: 33.783003100319256, longitude: -118.1142578315947},
+        {latitude: 33.78296074328933, longitude: -118.1141237211292},
+        {latitude: 33.78284927733526, longitude: -118.1139440131352},
+        {latitude: 33.78279354430383, longitude: -118.11375894072343},
+        {latitude: 33.78276456311316, longitude: -118.11352290634323},
+        {latitude: 33.7827690217585, longitude: -118.11349608425459},
+        {latitude: 33.782497043960596, longitude: -118.11350144863552},
+        {latitude: 33.78250373194943, longitude: -118.11317690136275},
+        {latitude: 33.78250150262079, longitude: -118.11256803994097},
+        {latitude: 33.78249086060167, longitude: -118.11149605682787},
+    ];
+    
+    const USU = [
+        {latitude: 33.78248264074763, longitude: -118.11342109180704},
+        {latitude: 33.78203900291358, longitude: -118.11343182064252},
+        {latitude: 33.78203900291358, longitude: -118.1135578844592},
+        {latitude: 33.78203677357191, longitude: -118.11374295687094},
+        {latitude: 33.78194537051418, longitude: -118.11376173233302},
+        {latitude: 33.78169345426034, longitude: -118.11376977896023},
+    ];
+    
+    const walk_Education = [
+        {latitude: 33.782148240580135, longitude: -118.11343718504328},
+        {latitude: 33.782159387273296, longitude: -118.11252791623777},
+        {latitude: 33.78216384594919, longitude: -118.11150063018354},
+    ];
+    
+    const usu_Nugget = [ 
+        {latitude: 33.780832024454696, longitude: -118.11384108546844},
+        {latitude: 33.78027690876155, longitude: -118.11384108546545},
+        {latitude: 33.7802813675364, longitude: -118.11410394193432},
+    ];
+    
+    const science = [
+        {latitude: 33.780147344717456, longitude: -118.1131702626431},
+        {latitude: 33.78014957410828, longitude: -118.1130200589466},
+        {latitude: 33.78003587510183, longitude: -118.11302810557318},
+        {latitude: 33.780040333889225, longitude: -118.11299860127568},
+    ];
+    
+    const science_Success = [
+        {latitude: 33.780130202037505, longitude: -118.11310595456622},
+        {latitude: 33.77962412871351, longitude: -118.11326956931026},
+        {latitude: 33.779590687637366, longitude: -118.11317569200227},
+        {latitude: 33.77945357909683, longitude: -118.11322128955233},
+    ];
+    
+    const success_Psychology = [
+        {latitude: 33.77962412871351, longitude: -118.11326956931026},
+        {latitude: 33.77938892621035, longitude: -118.11334467117123},
+        {latitude: 33.77942682618222, longitude: -118.11349085155442},
+        {latitude: 33.779524920149846, longitude: -118.11350158039758},
+        {latitude: 33.779586228822104, longitude: -118.11367860618273},
+        {latitude: 33.77962301400441, longitude: -118.1137872356418},
+        {latitude: 33.77949705255638, longitude: -118.11378723564965},
+        {latitude: 33.779509314298345, longitude: -118.11392805161512},
+    ];
+    
+    const psychology_Library = [
+        {latitude: 33.77947378117989, longitude: -118.11372451720484},
+        {latitude: 33.77904012861242, longitude: -118.11385337965962},
+        {latitude: 33.77730939091626, longitude: -118.11441602631905},
+    ];
+    
+    const peterson_McIntosh = [
+        {latitude: 33.77883327858466, longitude: -118.11278582274876},
+        {latitude: 33.77688385313634, longitude: -118.11340234376551},
+        {latitude: 33.776867762198265, longitude: -118.11334426833892},
+    ];
+    
+    const arts_Language = [ 
+        {latitude: 33.7782247540423, longitude: -118.11257315568864},
+        {latitude: 33.77696365880754, longitude: -118.11298113243933},
+        {latitude: 33.77693415877955, longitude: -118.11288756647428},
+    ];
+    
+    const peterson_Academic = [
+        {latitude: 33.779357287364554, longitude: -118.11333099705203},
+        {latitude: 33.777351481388116, longitude: -118.11395710222283},
+    ];
+    
+    const courtyard_UT = [
+        {latitude: 33.777351481388116, longitude: -118.11395710222283},
+        {latitude: 33.77711118931378, longitude: -118.11295544731725},
+        {latitude: 33.77695252515677, longitude: -118.11229767245308},
+        {latitude: 33.77679423235545, longitude: -118.11237009209248},
+    ];
+    
+    const courtyard_Arts = [
+        {latitude: 33.777393544740576, longitude: -118.11396386993886},
+        {latitude: 33.77800096043628, longitude: -118.11305870318549},
+    ];
+    
+    const office2_Arts = [
+        {latitude: 33.778772965764325, longitude: -118.11394622857472},
+        {latitude: 33.778688247510324, longitude: -118.11356535491579},
+        {latitude: 33.778708312367534, longitude: -118.11349025306754},
+        {latitude: 33.778567549187976, longitude: -118.11287146355795},
+        {latitude: 33.778400341623374, longitude: -118.11218213584529},
+    ];
+    
+    const theatre_Library = [
+        {latitude: 33.776343085919684, longitude: -118.11290528095137},
+        {latitude: 33.77625390627819, longitude: -118.1129401496666},
+        {latitude: 33.77669534460014, longitude: -118.1147640517653},
+        {latitude: 33.77690268605544, longitude: -118.1147667339818},
+        {latitude: 33.777007471336944, longitude: -118.11524416717468},
+    ];
+    
+    const center_Microbiology = [
+        {latitude: 33.77934456927299, longitude: -118.11327203189218},
+        {latitude: 33.77904165865879, longitude: -118.1119517228954},
+        {latitude: 33.778894516836104, longitude: -118.11199732044612},
+        {latitude: 33.77885215777969, longitude: -118.11176933269252},
+    ];
+
+    {/*End of array of coordinates for ADA paths by Miguel*/}
+
     async function getLocationPermission() {
         let { status } = await Location.requestForegroundPermissionsAsync();
         if(status !== 'granted') {
@@ -94,6 +396,220 @@ export default function Map() {
                     coordinate = {destination} 
                     onDragEnd = {e => setDestination(e.nativeEvent.coordinate)}
                 />
+                
+                {/* Beginning of ADA path polylines by Miguel*/}
+
+                <Polyline
+                    coordinates = {bell_7th}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {bell_Beach}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {beach_Library}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {deter_ParksideNorth}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {commons_Village}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {atherton_CDC}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {g4_SSH}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {g3_Brotman}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {g6_Brotman}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {g11_Brotman}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {g11_Walter_1}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {g11_Walter_2}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {walter_Carpenter}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {walter_Engr2}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {engr2_COB}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {tennis_G12}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {e5}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />  
+
+                <Polyline
+                    coordinates = {tennis_Affairs}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {affairs_Education}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {engr2_Education}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {business_Engr3}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {USU}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline 
+                    coordinates = {walk_Education}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {usu_Nugget}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {science}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {science_Success}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline 
+                    coordinates = {success_Psychology}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {peterson_McIntosh}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {arts_Language}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {peterson_Academic}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {courtyard_UT}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {courtyard_Arts}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {office2_Arts}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {theatre_Library}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                <Polyline
+                    coordinates = {center_Microbiology}
+                    strokeColor = "#007AFF"
+                    strokeWidth = {3}
+                />
+
+                {/* End of ADA path polylines by Miguel*/}
 
                 {/* Beginning of Map markers */}
 
