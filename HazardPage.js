@@ -1,17 +1,34 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
-import { Text, Button, Input, CheckBox, Icon } from "@rneui/themed";
+import axios from "axios";
 import React, { useState } from "react";
+import { StatusBar } from "expo-status-bar";
+import NavBar from "./NavBar";
+import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
+import { Text, Button, CheckBox, Input, Icon } from "@rneui/themed";
 //import { wrap } from "module";
 
 //This is our HazardPage
 export default function HazardPage({ navigation }) {
-  //Creating state variables to show whether users checked the checkbox
-  const [check1, setCheck1] = useState(false);
-  const [check2, setCheck2] = useState(false);
-  const [check3, setCheck3] = useState(false);
-  const [check4, setCheck4] = useState(false);
-  //What we're returning
+  const [criminalActivity, setCriminalActivity] = useState(false);
+  const [construction, setConstruction] = useState(false);
+  const [blockedPath, SetBlockedPath] = useState(false);
+  const [other, setOther] = useState(false);
+
+  const handleHazard = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/api/hazard/add-hazard', {
+        criminalActivity,
+        construction,
+        blockedPath,
+        other
+      });
+ 
+      console.log(response.data);
+      navigation.navigate("Login"); // will edit route eventually
+    } catch (error) {
+      console.error(error.response);
+    }
+  }
+
   return (
     //This view encapsulates all of our elements
     <View style={styles.container}>
@@ -31,29 +48,29 @@ export default function HazardPage({ navigation }) {
         {...boxStyle}
         center
         title="Criminal Activity"
-        checked={check1}
-        onPress={() => setCheck1(!check1)}
+        checked={criminalActivity}
+        onPress={() => setCriminalActivity(!criminalActivity)}
       />
       <CheckBox
         {...boxStyle}
         center
         title="Construction"
-        checked={check2}
-        onPress={() => setCheck2(!check2)}
+        checked={construction}
+        onPress={() => setConstruction(!construction)}
       />
       <CheckBox
         {...boxStyle}
         center
         title="Blocked Path"
-        checked={check3}
-        onPress={() => setCheck3(!check3)}
+        checked={blockedPath}
+        onPress={() => SetBlockedPath(!blockedPath)}
       />
       <CheckBox
         {...boxStyle}
         center
         title="Other"
-        checked={check4}
-        onPress={() => setCheck4(!check4)}
+        checked={other}
+        onPress={() => setOther(!other)}
       />
       {/** Button element to submit the report, temporarily leads to the login page again*/}
       <Button
@@ -71,10 +88,12 @@ export default function HazardPage({ navigation }) {
           marginVertical: 10,
         }}
         onPress={() => {
-          navigation.navigate("Login");
+          handleHazard(); 
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+
+    <NavBar/>
     </View>
   );
 }

@@ -10,6 +10,12 @@ import SchedulePath from "./SchedulePath";
 import SavedPaths from "./SavedPathsPage";
 import PathSummary from "./PathSummaryPage";
 import ProfilePage from "./ProfilePage";
+import HazardSummaryPage from "./HazardSummaryPage"; 
+import MapPage from "./MapPage";
+import CallEmergServicesPage from "./CallEmergServicesPage";
+import SafetyButtonPage from "./SafetyButtonPage";
+import SBCancelMessagePage from "./SBCancelMessagePage";
+import SBMessageLocationPage from "./SBMessageLocationPage";
 
 //Creates the StackNavigator, which allows us to add screens in the stack and navigate to other screens
 const Stack = createStackNavigator();
@@ -52,6 +58,36 @@ function MyStack() {
       <Stack.Screen
         name="PathSummary"
         component={PathSummary}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="HazardSummary"
+        component={HazardSummaryPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SafetyButton"
+        component={SafetyButtonPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SBCancelMessage"
+        component={SBCancelMessagePage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SBMessageLocation"
+        component={SBMessageLocationPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CallEmergServices"
+        component={CallEmergServicesPage}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Map"
+        component={MapPage}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

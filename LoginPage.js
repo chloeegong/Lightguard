@@ -1,13 +1,32 @@
+import axios from "axios"; 
+import React, { useState } from 'react'; 
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
-//import { wrap } from "module";
 
 //This is our LoginPage
 export default function LoginPage({ navigation }) {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/api/auth/login', {
+        email, 
+        password
+      }); 
+
+      console.log(response.data); 
+      navigation.navigate("Map"); 
+    } catch (error) {
+      console.error(error.response); 
+    }
+  }; 
+
   return (
     //This view encapsulates all of our elements
     <View style={styles.container}>
+
       {/** Text Element for our Title*/}
       <Text
         style={{
@@ -33,68 +52,59 @@ export default function LoginPage({ navigation }) {
       {/** This is the status bar, the bar on top of the phone that shows battery life and time*/}
       <StatusBar style="auto" />
 
+
+      <View style={styles.topBotMargin} />
+
+      <Text style={styles.titleText}>Lightguard</Text>
+
+      <Text style={styles.subtitleText}>Log in to get started!</Text>
+
+
       {/** Input element for Login Email*/}
       <Input
-        inputStyle={{
-          color: "white",
-          paddingLeft: "2%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          paddingTop: "8%",
-        }}
-        containerStyle={{ width: "80%", top: "7%" }}
+        inputStyle={styles.inputText}
+        containerStyle={{width: "80%"}}
         placeholder="Email"
-        leftIconContainerStyle={{
-          paddingTop: "7%",
-          paddingLeft: "5%",
-        }}
+        leftIconContainerStyle={styles.leftIconCont}
         leftIcon={{
           size: "12%",
           color: "white",
           type: "font-awesome",
-          name: "envelope",
-        }}
+          name: "envelope"}}
+        onChangeText={setEmail}
       />
-      {/** Input element for Login password*/}
+
       <Input
         secureTextEntry={true}
-        inputStyle={{
-          color: "white",
-          paddingLeft: "3%",
-          fontFamily: "Menlo",
-          fontSize: 13,
-          paddingTop: "7%",
-        }}
-        containerStyle={{ width: "80%", bottom: "8%" }}
+        inputStyle={styles.inputText}
+        containerStyle={{width: "80%"}}
         placeholder="Password"
-        leftIconContainerStyle={{
-          paddingTop: "7%",
-          paddingLeft: "5%",
-        }}
+        leftIconContainerStyle={styles.leftIconCont}
         leftIcon={{
-          size: "17%",
+          size: "12%",
           color: "white",
           type: "font-awesome",
-          name: "lock",
-        }}
+          name: "lock"}}
+        onChangeText={setPassword}
       />
-      {/** Button element to move to next page when email and password and entered*/}
+
       <Button
-        title="Let's go!"
+        title="Let's go! 🏃"
         buttonStyle={{
           backgroundColor: "#A4A5F0",
-          borderWidth: 2,
-          borderColor: "#A4A5F0",
           borderRadius: 30,
         }}
         containerStyle={{
-          bottom: "2%",
           width: 200,
           marginHorizontal: 50,
           marginVertical: 10,
         }}
+        onPress={() => {
+          handleLogin(); 
+        }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+
       {/** Text element for no account, and used touchable opacity (button) to lead users to signup page*/}
       <Text
         style={{
@@ -105,7 +115,11 @@ export default function LoginPage({ navigation }) {
           color: "#FFFFFF",
         }}
       >
+
+      <Text style={styles.testLinks}>
+
         No account?{" "}
+        
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("SignUp");
@@ -116,6 +130,79 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+
+
+      {/* Enter Map */}
+      {/* Katrina */}
+      <Text style={styles.testLinks}>
+        Test Map:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Map");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+
+      {/* Enter Test Call */}
+      {/* Jocelyn */}
+      <Text style={styles.testLinks}>
+        Test Call:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("CallEmergServices");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      {/* Enter Test Safety Button */}
+      <Text style={styles.testLinks}>
+        Test Safety Button:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("SafetyButton");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      {/* Enter Hazard Reporting */}
+      {/* Chloee */}
+      <Text style={styles.testLinks}>
+        Hazard:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Hazard");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      {/* Enter Hazard Summary */}
+      <Text style={styles.testLinks}>
+        Hazard Summary:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("HazardSummary");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      <View style={styles.topBotMargin} />
+    
     </View>
   );
 }
@@ -125,10 +212,36 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    alignItems: "flex-start",
-    changeDirection: "inherit",
     backgroundColor: "#181818",
+    justifyContent: "space-evenly",
     alignItems: "center",
-    justifyContent: "space-around",
   },
+  titleText: {
+    fontFamily: "Menlo-Bold",
+    fontSize: 30,
+    color: "#F9CB40"
+  },
+  subtitleText: {
+    fontFamily: "Menlo",
+    fontSize: 16,
+    color: "white"
+  },
+  inputText: {
+    color: "white",
+    paddingLeft: "2%",
+    fontFamily: "Menlo",
+    fontSize: 13,
+    paddingTop: "2%",
+  },
+  leftIconCont: {
+    paddingLeft: "5%",
+  },
+  testLinks: {
+    fontFamily: "Menlo",
+    fontSize: 13,
+    color: "#FFFFFF",
+  },
+  topBotMargin: {
+    height: "15%"
+  }
 });
