@@ -12,7 +12,7 @@ export default function CallEmergServicesPage({ navigation }) {
   const handleCall= async() => {
     console.log(("inside handleCall"))
     try {
-      const response = await axios.post('http://localhost:3001/message_contact', {});
+      const response = await axios.get('http://localhost:3001/call-emerg', {});
       //console.log(response.data);
       navigation.navigate("Map");
     } catch (error) {
@@ -22,14 +22,14 @@ export default function CallEmergServicesPage({ navigation }) {
   };
 
   //making fetch api call to backend server
-  initiateCall = () => {
+  // initiateCall = () => {
  
-      fetch('http://localhost:3001/call-emerg', { method: 'GET' })
-        .then(data => data.json()) // Parsing the data into a JavaScript object
-        .then(json => alert(JSON.stringify(json))) // Displaying the stringified data in an alert popup
-        .catch(err => console.error(err))
-      return;
-    }
+  //     fetch('http://localhost:3001/call-emerg', { method: 'GET' })
+  //       .then(data => data.json()) // Parsing the data into a JavaScript object
+  //       .then(json => alert(JSON.stringify(json))) // Displaying the stringified data in an alert popup
+  //       .catch(err => console.error(err))
+  //     return;
+  //   }
 
 
 //const {text}=this.state;
