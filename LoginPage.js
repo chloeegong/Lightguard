@@ -165,6 +165,19 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+      {/* Enter E Contact Reporting */}
+      <Text style={styles.testLinks}>
+        EmergencyContactAdd:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("EmergencyContact");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
       {/* Enter Hazard Summary */}
       <Text style={styles.testLinks}>
         Hazard Summary:{" "}

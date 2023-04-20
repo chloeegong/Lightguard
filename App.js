@@ -16,6 +16,7 @@ import CallEmergServicesPage from "./CallEmergServicesPage";
 import SafetyButtonPage from "./SafetyButtonPage";
 import SBCancelMessagePage from "./SBCancelMessagePage";
 import SBMessageLocationPage from "./SBMessageLocationPage";
+import EmergencyContact from "./EmergencyContact";
 
 //Creates the StackNavigator, which allows us to add screens in the stack and navigate to other screens
 const Stack = createStackNavigator();
@@ -90,6 +91,13 @@ function MyStack() {
         component={ProfilePage}
         options={{ headerShown: false }}
       />
+
+      <Stack.Screen
+        name="EmergencyContact"
+        component={EmergencyContact}
+        options={{ headerShown: false }}
+      />
+
     </Stack.Navigator>
   );
 }
