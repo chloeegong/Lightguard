@@ -29,28 +29,6 @@ export default function LoginPage({ navigation }) {
   return (
     //This view encapsulates all of our elements
     <View style={styles.container}>
-      {/** Text Element for our Title*/}
-      <Text
-        style={{
-          top: "13%",
-          fontFamily: "Menlo-Bold",
-          fontSize: 30,
-          color: "#F9CB40",
-        }}
-      >
-        Lightguard
-      </Text>
-      <Text
-        style={{
-          top: "17.5%",
-          fontFamily: "Menlo",
-          fontSize: 16,
-          color: "white",
-        }}
-      >
-        Log in to get started!
-      </Text>
-
       {/** This is the status bar, the bar on top of the phone that shows battery life and time*/}
       <StatusBar style="auto" />
 
@@ -180,6 +158,19 @@ export default function LoginPage({ navigation }) {
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("Hazard");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
+      {/* Enter E Contact Reporting */}
+      <Text style={styles.testLinks}>
+        EmergencyContactAdd:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("EmergencyContact");
           }}
         >
           <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
