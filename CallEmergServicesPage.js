@@ -9,9 +9,9 @@ import React, {useState} from 'react';
 export default function CallEmergServicesPage({ navigation }) {
   
   const handleCall= async() => {
+    console.log(("inside handleCall"))
     try {
-      const response = await axios.post('http://localhost:3001/message_contact'
-      );
+      const response = await axios.post('http://localhost:3001/message_contact', {});
       //console.log(response.data);
       navigation.navigate("Map");
     } catch (error) {
@@ -50,7 +50,9 @@ export default function CallEmergServicesPage({ navigation }) {
             marginHorizontal: 110,
             marginVertical: 350,
           }}
-          onPress={handleCall()}
+          onPress={() => {
+            handleCall();
+          }}
           titleStyle={{ fontFamily: "Menlo", fontSize: 18 }} />
       );
  
