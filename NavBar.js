@@ -36,6 +36,16 @@ export default function NavBar() {
                     <Icon name = "star"/>
                 </Pressable>
 
+                {/* Jocelyn */}
+                {/* Adds safety button to navbar */}
+                <Pressable onPress={() => {navigation.navigate("SafetyButton");}}>
+                    <Icon name = "warning"/>
+                </Pressable>
+
+                <Pressable onPress={() => {navigation.navigate("CallEmergServices");}}>
+                    <Icon name = "call"/>
+                </Pressable>
+
                 <Pressable>
                     <Icon name = "person"/>
                 </Pressable>

@@ -91,11 +91,13 @@ function MyStack() {
         component={ProfilePage}
         options={{ headerShown: false }}
       />
+
       <Stack.Screen
         name="EmergencyContact"
         component={EmergencyContact}
         options={{ headerShown: false }}
       />
+
     </Stack.Navigator>
   );
 }

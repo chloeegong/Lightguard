@@ -191,6 +191,19 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
+      {/* Enter Profile Summary */}
+      <Text style={styles.testLinks}>
+        Profile:{" "}
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("ProfilePage");
+          }}
+        >
+          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
+            Enter
+          </Text>
+        </TouchableOpacity>
+      </Text>
       <View style={styles.topBotMargin} />
     </View>
   );
