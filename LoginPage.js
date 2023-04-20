@@ -1,5 +1,5 @@
-import axios from "axios"; 
-import React, { useState } from 'react'; 
+import axios from "axios";
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
@@ -11,22 +11,24 @@ export default function LoginPage({ navigation }) {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/login', {
-        email, 
-        password
-      }); 
+      const response = await axios.post(
+        "http://localhost:3001/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
 
-      console.log(response.data); 
-      navigation.navigate("Map"); 
+      console.log(response.data);
+      navigation.navigate("Map");
     } catch (error) {
-      console.error(error.response); 
+      console.error(error.response);
     }
-  }; 
+  };
 
   return (
     //This view encapsulates all of our elements
     <View style={styles.container}>
-
       {/** Text Element for our Title*/}
       <Text
         style={{
@@ -52,39 +54,39 @@ export default function LoginPage({ navigation }) {
       {/** This is the status bar, the bar on top of the phone that shows battery life and time*/}
       <StatusBar style="auto" />
 
-
       <View style={styles.topBotMargin} />
 
       <Text style={styles.titleText}>Lightguard</Text>
 
       <Text style={styles.subtitleText}>Log in to get started!</Text>
 
-
       {/** Input element for Login Email*/}
       <Input
         inputStyle={styles.inputText}
-        containerStyle={{width: "80%"}}
+        containerStyle={{ width: "80%" }}
         placeholder="Email"
         leftIconContainerStyle={styles.leftIconCont}
         leftIcon={{
           size: "12%",
           color: "white",
           type: "font-awesome",
-          name: "envelope"}}
+          name: "envelope",
+        }}
         onChangeText={setEmail}
       />
 
       <Input
         secureTextEntry={true}
         inputStyle={styles.inputText}
-        containerStyle={{width: "80%"}}
+        containerStyle={{ width: "80%" }}
         placeholder="Password"
         leftIconContainerStyle={styles.leftIconCont}
         leftIcon={{
           size: "12%",
           color: "white",
           type: "font-awesome",
-          name: "lock"}}
+          name: "lock",
+        }}
         onChangeText={setPassword}
       />
 
@@ -100,7 +102,7 @@ export default function LoginPage({ navigation }) {
           marginVertical: 10,
         }}
         onPress={() => {
-          handleLogin(); 
+          handleLogin();
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
@@ -114,12 +116,10 @@ export default function LoginPage({ navigation }) {
           fontSize: 13,
           color: "#FFFFFF",
         }}
-      >
+      />
 
       <Text style={styles.testLinks}>
-
         No account?{" "}
-        
         <TouchableOpacity
           onPress={() => {
             navigation.navigate("SignUp");
@@ -130,7 +130,6 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
-
 
       {/* Enter Map */}
       {/* Katrina */}
@@ -202,7 +201,6 @@ export default function LoginPage({ navigation }) {
         </TouchableOpacity>
       </Text>
       <View style={styles.topBotMargin} />
-    
     </View>
   );
 }
@@ -219,12 +217,12 @@ const styles = StyleSheet.create({
   titleText: {
     fontFamily: "Menlo-Bold",
     fontSize: 30,
-    color: "#F9CB40"
+    color: "#F9CB40",
   },
   subtitleText: {
     fontFamily: "Menlo",
     fontSize: 16,
-    color: "white"
+    color: "white",
   },
   inputText: {
     color: "white",
@@ -242,6 +240,6 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   topBotMargin: {
-    height: "15%"
-  }
+    height: "15%",
+  },
 });
