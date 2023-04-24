@@ -180,6 +180,11 @@ export default function Map() {
         {latitude: 33.78177619168245, longitude: -118.11574442544621},
     ];
 
+    const beach_Library = [
+        {latitude: 33.77763502101807, longitude: -118.11513112423324},
+        {latitude: 33.777476729477904, longitude: -118.11436669470646},
+      ];
+
     const deter_ParksideNorth = [
         {latitude: 33.78226379974979, longitude: -118.12080380502358},
         {latitude: 33.78354788752802, longitude: -118.12018153256669},
@@ -526,8 +531,59 @@ export default function Map() {
                     coordinate = {{latitude: 33.786689, longitude:  -118.114677}}
                     image={steetLampImage}
                 />
-
-
+                {/* Jocelyn */}
+                {/* Work Review 4 - added 10 more lamps to upper campus*/}
+                <Marker
+                    title = "Lamp - Horn Center N"
+                    coordinate = {{latitude: 33.783743, longitude: -118.114116}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Horn Center N"
+                    coordinate = {{latitude: 33.783743, longitude: -118.114116}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - SHSS"
+                    coordinate = {{latitude: 33.782107, longitude:  -118.118155}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Lower Campus Stairs"
+                    coordinate = {{latitude: 33.780268, longitude:  -118.113092}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Library W"
+                    coordinate = {{latitude: 33.777512, longitude: -118.115217}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - LA2 W"
+                    coordinate = {{latitude: 33.777997, longitude: -118.115082}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - LA5 S"
+                    coordinate = {{latitude: 33.778711, longitude: -118.114145}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Central Quad W1"
+                    coordinate = {{latitude: 33.778623, longitude: -118.113576}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Central Quad Middel"
+                    coordinate = {{latitude: 33.778185, longitude:  -118.113361}}
+                    image={steetLampImage}
+                />
+                <Marker
+                    title = "Lamp - Brotman E"
+                    coordinate = {{latitude: 33.782579, longitude:  -118.114675}}
+                    image={steetLampImage}
+                />
+          
 
                 {/* Create map pin for origin. It can be dragged to set a new origin. */}
                 {/* Katrina */}
