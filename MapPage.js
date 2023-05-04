@@ -410,9 +410,10 @@ export default function Map() {
                     coordinate = {destination} 
                     onDragEnd = {e => setDestination(e.nativeEvent.coordinate)}
                 />
+                {/*Start of ADA filter by Miguel*/}
                 {showPaths && (
                     <>
-                        {/* Start of ADA paths by Miguel*/}
+                        {/*Start of ADA paths by Miguel*/}
                         <Polyline coordinates={bell_7th} strokeColor="#008AFF" strokeWidth={3}/>
                         <Polyline
                             coordinates = {bell_Beach}
@@ -499,118 +500,100 @@ export default function Map() {
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {affairs_Education}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {engr2_Education}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {business_Engr3}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {USU}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline 
                             coordinates = {walk_Education}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {usu_Nugget}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {science}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {science_Success}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline 
                             coordinates = {success_Psychology}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {psychology_Library}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {peterson_McIntosh}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {arts_Language}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {peterson_Academic}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {courtyard_UT}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {courtyard_Arts}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {office2_Arts}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {theatre_Library}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-
                         <Polyline
                             coordinates = {center_Microbiology}
                             strokeColor = "#007AFF"
                             strokeWidth = {3}
                         />
-                        {/* End of ADA paths by Miguel*/}
+                        {/*End of ADA paths by Miguel*/}
                     </>
                 )}
-                {/* End of ADA path polylines by Miguel*/}
+                {/*End of ADA filter by Miguel*/}
 
                 {/*Start of markers + descriptions by Miguel*/}
 
