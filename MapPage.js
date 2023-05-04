@@ -5,7 +5,12 @@
 
 import * as React from "react";
 import * as Location from 'expo-location'
+<<<<<<< Updated upstream
 import { Pressable, StyleSheet, Text, TextInputComponent, View } from "react-native";
+=======
+import { Pressable, StyleSheet, Text, TextInputComponent, View, Switch } from "react-native";
+import { Button } from '@rneui/themed'
+>>>>>>> Stashed changes
 import Constants from "expo-constants";
 import MapView, { Marker, Polyline } from "react-native-maps"; // Chloee
 import MapViewDirections from "react-native-maps-directions"; // Chloee
@@ -1793,8 +1798,18 @@ export default function Map() {
                     nearbyPlacesAPI="GooglePlacesSearch"
                     debounce={400}
                     />
-                
+
+            {/* ADA filter button */}
+            {/* Miguel + Katrina */}
+            <Button 
+                title={showPaths ? 'Hide ADA Paths' : 'Show ADA Paths'}
+                onPress={togglePaths}
+                color='gray'
+                type='solid'
+                />
+
             </View>
+            
 
         <NavBar/>
 
