@@ -28,34 +28,25 @@ export default function NavBar() {
                     justifyContent: "space-evenly",
                     borderRadius: 40
                 }}>
-
-                {/* Katrina */}
-                {/* Adds map button to navbar */}
                 <Pressable onPress={() => {navigation.navigate("Map");}}>
                     <Icon name = "map"/>
                 </Pressable>
 
-                {/* Katrina */}
-                {/* Adds hazard reporting button to navbar */}
                 <Pressable onPress={() => {navigation.navigate("Hazard");}}>
-                    <Icon name = "warning"/>
+                    <Icon name = "star"/>
                 </Pressable>
 
                 {/* Jocelyn */}
                 {/* Adds safety button to navbar */}
                 <Pressable onPress={() => {navigation.navigate("SafetyButton");}}>
-                    <Icon name = "shield"/>
+                    <Icon name = "warning"/>
                 </Pressable>
 
-                {/* Katrina */}
-                {/* Adds emergency button to navbar */}
                 <Pressable onPress={() => {navigation.navigate("CallEmergServices");}}>
                     <Icon name = "call"/>
                 </Pressable>
 
-                {/* Katrina */}
-                {/* Adds profile button to navbar */}
-                <Pressable onPress={() => {navigation.navigate("ProfilePage");}}>
+                <Pressable>
                     <Icon name = "person"/>
                 </Pressable>
             </View>
