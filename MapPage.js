@@ -182,11 +182,6 @@ export default function Map() {
         {latitude: 33.777003619649165, longitude: -118.11525181945046},
     ];
 
-    const beach_Library = [
-        {latitude: 33.77763502101807, longitude: -118.11513112423324},
-        {latitude: 33.777476729477904, longitude: -118.11436669470646},
-      ];
-
     const bell_Beach = [
         {latitude: 33.78188934387241, longitude: -118.12212256816346},
         {latitude: 33.78189211772415, longitude: -118.11541183154684},
@@ -1726,7 +1721,6 @@ export default function Map() {
                     strokeWidth = {8}
                 />
             </MapView>
-            <Button title={showPaths ? 'Hide ADA Paths' : 'Show ADA Paths'} onPress={togglePaths}/>
         
             <View style={styles.searchContainer}>
                 {/* Configuring the search bar for users to select an origin. */}
