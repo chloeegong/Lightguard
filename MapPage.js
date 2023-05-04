@@ -5,7 +5,7 @@
 
 import * as React from "react";
 import * as Location from 'expo-location'
-import { Pressable, StyleSheet, Text, TextInputComponent, View } from "react-native";
+import { Pressable, StyleSheet, Text, TextInputComponent, View, Button } from "react-native";
 import Constants from "expo-constants";
 import MapView, { Marker, Polyline } from "react-native-maps"; // Chloee
 import MapViewDirections from "react-native-maps-directions"; // Chloee
@@ -33,6 +33,14 @@ export default function Map() {
         latitude:33.78286056260645, 
         longitude:-118.11030815967545,
     });
+
+    {/*Start of filter components for ADA paths by Miguel*/}
+    const [showPaths, setShowPaths] = React.useState(true);
+  
+    const togglePaths = () => {
+        setShowPaths(!showPaths);
+    }
+    {/*End of filter components for ADA paths by Miguel*/}
 
     {/* Set light destinations */}
     {/* Jocelyn */}
@@ -145,7 +153,6 @@ export default function Map() {
 
     const lampNuggetE = {latitude: 33.780300,  longitude: -118.113762}
 
-
     {/* Ask permission from user to use their location. */}
     {/* Katrina */}
     React.useEffect(() => {
@@ -173,6 +180,11 @@ export default function Map() {
         {latitude: 33.777471807636886, longitude: -118.1152276795729},
         {latitude: 33.777003619649165, longitude: -118.11525181945046},
     ];
+
+    const beach_Library = [
+        {latitude: 33.77763502101807, longitude: -118.11513112423324},
+        {latitude: 33.777476729477904, longitude: -118.11436669470646},
+      ];
 
     const bell_Beach = [
         {latitude: 33.78188934387241, longitude: -118.12212256816346},
@@ -613,220 +625,190 @@ export default function Map() {
                     coordinate = {destination} 
                     onDragEnd = {e => setDestination(e.nativeEvent.coordinate)}
                 />
-                
-                {/* Beginning of ADA path polylines by Miguel*/}
-
-                <Polyline
-                    coordinates = {bell_7th}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {bell_Beach}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {beach_Library}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {deter_ParksideNorth}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {commons_Village}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {atherton_CDC}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {g4_SSH}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {g3_Brotman}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {g6_Brotman}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {g11_Brotman}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {g11_Walter_1}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {g11_Walter_2}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {walter_Carpenter}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {walter_Engr2}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {engr2_COB}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {tennis_G12}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {e5}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />  
-
-                <Polyline
-                    coordinates = {tennis_Affairs}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {affairs_Education}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {engr2_Education}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {business_Engr3}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {USU}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline 
-                    coordinates = {walk_Education}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {usu_Nugget}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {science}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {science_Success}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline 
-                    coordinates = {success_Psychology}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {peterson_McIntosh}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {arts_Language}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {peterson_Academic}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {courtyard_UT}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {courtyard_Arts}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {office2_Arts}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {theatre_Library}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                <Polyline
-                    coordinates = {center_Microbiology}
-                    strokeColor = "#007AFF"
-                    strokeWidth = {3}
-                />
-
-                {/* End of ADA path polylines by Miguel*/}
+                {/*Start of ADA filter by Miguel*/}
+                {showPaths && (
+                    <>
+                        {/*Start of ADA paths by Miguel*/}
+                        <Polyline coordinates={bell_7th} strokeColor="#008AFF" strokeWidth={3}/>
+                        <Polyline
+                            coordinates = {bell_Beach}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {beach_Library}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {deter_ParksideNorth}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {commons_Village}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {atherton_CDC}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {g4_SSH}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {g3_Brotman}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {g6_Brotman}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {g11_Brotman}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {g11_Walter_1}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {g11_Walter_2}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {walter_Carpenter}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {walter_Engr2}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {engr2_COB}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {tennis_G12}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {e5}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />  
+                        <Polyline
+                            coordinates = {tennis_Affairs}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {affairs_Education}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {engr2_Education}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {business_Engr3}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {USU}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline 
+                            coordinates = {walk_Education}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {usu_Nugget}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {science}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {science_Success}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline 
+                            coordinates = {success_Psychology}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {psychology_Library}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {peterson_McIntosh}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {arts_Language}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {peterson_Academic}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {courtyard_UT}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {courtyard_Arts}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {office2_Arts}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {theatre_Library}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        <Polyline
+                            coordinates = {center_Microbiology}
+                            strokeColor = "#007AFF"
+                            strokeWidth = {3}
+                        />
+                        {/*End of ADA paths by Miguel*/}
+                    </>
+                )}
+                {/*End of ADA filter by Miguel*/}
 
                 {/* Crime Hotspots */}
                 {/* Katrina + Jocelyn */}
@@ -840,7 +822,6 @@ export default function Map() {
                 {/* Beginning of Map markers */}
                 {/* Miguel (Coordinates) */}
                 {/* Katrina (Near-To Index) */}
-                
 
                 {/*Stores*/}
                 <Marker
@@ -1744,6 +1725,7 @@ export default function Map() {
                     strokeWidth = {8}
                 />
             </MapView>
+            <Button title={showPaths ? 'Hide ADA Paths' : 'Show ADA Paths'} onPress={togglePaths}/>
         
             <View style={styles.searchContainer}>
                 {/* Configuring the search bar for users to select an origin. */}
