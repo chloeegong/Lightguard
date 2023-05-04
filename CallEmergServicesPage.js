@@ -4,6 +4,7 @@ import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import axios from 'axios';
 import React, {useState} from 'react';
+import NavBar from "./NavBar";
 
 
 //calls emergency contact
@@ -56,6 +57,8 @@ export default function CallEmergServicesPage({ navigation }) {
             handleCall();
           }}
           titleStyle={{ fontFamily: "Menlo", fontSize: 18 }} />
+          {/* Katrina */}
+          <NavBar/>
         </View>  
       );
   

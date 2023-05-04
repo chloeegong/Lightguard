@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View, TouchableOpacity, wrap } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
+import NavBar from "./NavBar";
 
 //This is our ProfilePage
 export default function ProfilePage({ navigation }) {
@@ -181,6 +182,8 @@ export default function ProfilePage({ navigation }) {
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />
+    {/*Katrina*/}
+    <NavBar/>
     </View>
   );
 }
