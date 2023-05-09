@@ -178,19 +178,6 @@ export default function LoginPage({ navigation }) {
           </Text>
         </TouchableOpacity>
       </Text>
-      {/* Enter Hazard Summary */}
-      <Text style={styles.testLinks}>
-        Hazard Summary:{" "}
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate("HazardSummary");
-          }}
-        >
-          <Text style={{ color: "#F9CB40", textDecorationLine: "underline" }}>
-            Enter
-          </Text>
-        </TouchableOpacity>
-      </Text>
       {/* Enter Profile Summary */}
       <Text style={styles.testLinks}>
         Profile:{" "}
