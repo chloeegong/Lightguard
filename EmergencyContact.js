@@ -5,7 +5,7 @@ import { StyleSheet, View } from "react-native";
 import { Text, Button, Input, Icon } from "@rneui/themed";
 
 //This is our EmergencyContactPage
-export default function SignUpPage({ navigation }) {
+export default function EmergencyContact({ navigation }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,28 +14,9 @@ export default function SignUpPage({ navigation }) {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [emergencyContacts, setEmergencyContacts] = useState([]);
 
-  const handleSignUp = async () => {
-    // password and confirmPassword verification
-    if (password != confirmPassword) {
-      console.log("Passwords do not match");
-      return;
-    }
-
+  const handleEmergContact = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:3001/auth/users/student-register",
-        {
-          firstName,
-          lastName,
-          email,
-          password,
-          phoneNumber,
-          emergencyContacts,
-        }
-      );
-
-      console.log(response.data);
-      navigation.navigate("Hazard");
+      navigation.navigate("Map");
     } catch (error) {
       console.error(error.response);
     }
@@ -112,7 +93,7 @@ export default function SignUpPage({ navigation }) {
           marginVertical: 10,
         }}
         onPress={() => {
-          handleSignUp();
+          handleEmergContact();
         }}
         titleStyle={{ fontFamily: "Menlo", fontSize: 18 }}
       />

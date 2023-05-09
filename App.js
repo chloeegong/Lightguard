@@ -10,7 +10,6 @@ import SchedulePath from "./SchedulePath";
 import SavedPaths from "./SavedPathsPage";
 import PathSummary from "./PathSummaryPage";
 import ProfilePage from "./ProfilePage";
-import HazardSummaryPage from "./HazardSummaryPage";
 import MapPage from "./MapPage";
 import CallEmergServicesPage from "./CallEmergServicesPage";
 import SafetyButtonPage from "./SafetyButtonPage";
@@ -54,11 +53,6 @@ function MyStack() {
       <Stack.Screen
         name="PathSummary"
         component={PathSummary}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="HazardSummary"
-        component={HazardSummaryPage}
         options={{ headerShown: false }}
       />
       <Stack.Screen

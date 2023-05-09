@@ -33,7 +33,8 @@ export default function SignUpPage({ navigation }) {
       });
 
       console.log(response.data); 
-      navigation.navigate("Hazard");
+      // navigate to emergency contact 
+      navigation.navigate("EmergencyContact")
     } catch (error) {
       console.error(error.response);
     }
