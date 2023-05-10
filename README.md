@@ -52,10 +52,10 @@ $ npm install dotenv --save
  
 Create .env file in server and add this code 
  ```
- $ MONGO_SRV=mongodb+srv://User1:HtUqP2h8BA3iVHwx@cluster0.b2ynlop.mongodb.net/test
- $ JWT_SECRET=secret
- $ TWILIO_ACCOUNT_SID='AC7be1f53871732629e5a314a9f767c893'
- $ TWILIO_AUTH_TOKEN='e5d94c98e4b6f413c5ff5a89b55ae074'
+ $ MONGO_SRV=[]
+ $ JWT_SECRET=[]
+ $ TWILIO_ACCOUNT_SID=[]
+ $ TWILIO_AUTH_TOKEN=[]
  ```
  
  Start server 
@@ -71,7 +71,7 @@ $ npm install
  
  Create .env file in client and add this code 
  ```
- $ GOOGLE_MAPS_KEY=AIzaSyBFaR2pqg2j7PIQqCW9GGhbKA8asYTFf50
+ $ GOOGLE_MAPS_KEY=[]
  ```
 
 Start client 
