@@ -9,10 +9,9 @@ export default function SafetyButtonPage({ navigation }) {
   //message = "Alert: Your friend selected that they need help while on their walk to their destination. Please check-in on them."
   const handleMessage= async() => {
     try {
-      const response = await axios.post('http://localhost:3001/message_contact', {
-        //message
-      });
-      //console.log(response.data);
+      console.log('inside function')
+      const response = await axios.get('http://localhost:3001/message_contact', {});
+      console.log('passed');
     } catch (error) {
       console.error(error.response);
     }
@@ -29,8 +28,9 @@ export default function SafetyButtonPage({ navigation }) {
           onPress: () => {navigation.navigate("Map")},
           style: 'cancel',
         },
-        {text: 'No, I need help.', onPress: () => {handleMessage 
-                                                    navigation.navigate("SBMessageLocation")},
+        {text: 'No, I need help.', 
+        onPress: () => {handleMessage() 
+                        navigation.navigate("SBMessageLocation")},
         },
         //{setTimeout: () => {handleMessage 
           //navigation.navigate("SBMessageLocation")}, 60000: any},

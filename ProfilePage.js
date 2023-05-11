@@ -127,7 +127,7 @@ export default function ProfilePage({ navigation }) {
       <Input
         {...inputStyles}
         containerStyle={{ width: "80%", bottom: "11%" }}
-        placeholder="Phoenix"
+        placeholder="Katrina"
         placeholderTextColor={"white"}
         leftIcon={{
           size: "12%",
@@ -139,7 +139,7 @@ export default function ProfilePage({ navigation }) {
       <Input
         {...inputStyles}
         containerStyle={{ width: "80%", bottom: "15%" }}
-        placeholder="Ngan"
+        placeholder="Orevillo"
         placeholderTextColor={"white"}
         leftIcon={{
           size: "12%",

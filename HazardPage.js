@@ -23,7 +23,7 @@ export default function HazardPage({ navigation }) {
       });
  
       console.log(response.data);
-      navigation.navigate("Login"); // will edit route eventually
+      navigation.navigate("Map"); // will edit route eventually
     } catch (error) {
       console.error(error.response);
     }
