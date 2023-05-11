@@ -6,11 +6,11 @@ import {View, StyleSheet, Button, Alert} from 'react-native';
 export default function SafetyButtonPage({ navigation }) {
   //const [message, setMessage] = useState();
   //connecting to backend with necessary parameters
-  message = "Alert: Your friend selected that they need help while on their walk to their destination. Please check-in on them."
+  //message = "Alert: Your friend selected that they need help while on their walk to their destination. Please check-in on them."
   const handleMessage= async() => {
     try {
       const response = await axios.post('http://localhost:3001/message_contact', {
-        message
+        //message
       });
       //console.log(response.data);
     } catch (error) {
@@ -26,7 +26,7 @@ export default function SafetyButtonPage({ navigation }) {
         //console.log("2 sec.")
         //}},
         {text: 'Yes, I am ok!',
-          onPress: () => console.log('Safely Pressed'),
+          onPress: () => {navigation.navigate("Map")},
           style: 'cancel',
         },
         {text: 'No, I need help.', onPress: () => {handleMessage 

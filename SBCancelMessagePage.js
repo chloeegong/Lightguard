@@ -23,7 +23,8 @@ export default function SBMessageLocationPage({ navigation }) {
     Alert.alert("Glad you're ok.", "We have notified your emergency contact.", [
         {
           text: 'Ok',
-          onPress: () => {console.log('Message Canceled')},
+          onPress: () => {console.log('Message Canceled')
+          navigation.navigate("Map")},
           style: 'cancel',
         },
         
