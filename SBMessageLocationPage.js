@@ -1,5 +1,6 @@
 //jocelyn
 import React from 'react';
+import axios from 'axios';
 import {View, StyleSheet, Button, Alert} from 'react-native';
 
 
@@ -9,6 +10,7 @@ export default function SBMessageLocationPage({ navigation }) {
     try {
       const response = await axios.get('http://localhost:3001/message_contact', {});
       //console.log(response.data);
+      navigation.navigate("SBCancelMessage")
       
     } catch (error) {
       console.error(error.response);
@@ -22,7 +24,7 @@ export default function SBMessageLocationPage({ navigation }) {
           text: 'I am ok now!',
           onPress: () => {console.log('Safely Pressed')
                             handleMessage()
-                            navigation.navigate("SBCancelMessage")},
+                          },
           style: 'cancel',
         },
         

@@ -53,7 +53,7 @@ export default function EmergencyContact({ navigation }) {
       />
       <Input
         {...inputStyles}
-        containerStyle={{ width: "80%", top: "8%" }}
+        containerStyle={{ width: "80%" }}
         placeholder="Last Name"
         leftIcon={{
           size: "12%",
@@ -67,7 +67,7 @@ export default function EmergencyContact({ navigation }) {
       {/** Input element for signup phone number*/}
       <Input
         {...inputStyles}
-        containerStyle={{ width: "80%", bottom: "20%" }}
+        containerStyle={{ width: "80%", bottom: "15%" }}
         placeholder="Phone Number"
         leftIcon={{
           size: "17%",

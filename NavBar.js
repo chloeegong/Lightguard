@@ -46,7 +46,7 @@ export default function NavBar() {
                     <Icon name = "call"/>
                 </Pressable>
 
-                <Pressable>
+                <Pressable onPress={() => {navigation.navigate("ProfilePage");}}>
                     <Icon name = "person"/>
                 </Pressable>
             </View>
